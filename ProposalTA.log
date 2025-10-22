@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.10.22)  22 OCT 2025 11:37
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.10.22)  22 OCT 2025 13:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1129,6 +1129,13 @@ sNewRoman(0)/m/it/12 Convolutional Neural Networks \TU/TimesNewRoman(0)/m/n/12
 (CNNs)
  []
 
+
+Overfull \hbox (4.14188pt too wide) in paragraph at lines 363--364
+\TU/TimesNewRoman(0)/m/n/12 menggunakan \TU/TimesNewRoman(0)/m/it/12 Recurrent 
+Neural Networks \TU/TimesNewRoman(0)/m/n/12 (RNNs) ([][][]Fernandes dan Fatma [
+][]April 2025[][],
+ []
+
 [1
 
 
@@ -1171,10 +1178,9 @@ Bab V.
 [11
 
 ]
-Overfull \hbox (6.60919pt too wide) in paragraph at lines 526--526
-[][]\TU/TimesNewRoman(0)/m/n/12 Laudon, Kenneth C., dan Jane P. Laudon. 2020. \
-TU/TimesNewRoman(0)/m/it/12 Sistem Informasi Manajemen. \TU/TimesNewRoman(0)/m/
-n/12 Jakarta:
+Overfull \hbox (2.08437pt too wide) in paragraph at lines 526--526
+\TU/TimesNewRoman(0)/m/n/12 ING DALAM TEKNOLOGI DEEPFAKE: SYSTEMATIC LITERATURE
+ RE-
  []
 
 [12
@@ -1197,18 +1203,19 @@ Package rerunfilecheck Info: File `ProposalTA.out' has not changed.
 (rerunfilecheck)             Checksum: 4F9FB18163A87EDF7CDFAA7EBEAF9D92;4203.
 
 Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
 
 Package logreq Info: Writing requests to 'ProposalTA.run.xml'.
 \openout1 = `ProposalTA.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27914 strings out of 409617
- 535674 string characters out of 5774012
+ 27940 strings out of 409617
+ 536367 string characters out of 5774012
  1930191 words of memory out of 5000000
- 49726 multiletter control sequences out of 15000+600000
+ 49752 multiletter control sequences out of 15000+600000
  563443 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 79i,10n,93p,1111b,6318s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,10n,93p,1129b,6344s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on ProposalTA.pdf (20 pages).

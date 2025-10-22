@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.10.22)  22 OCT 2025 11:16
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.10.22)  22 OCT 2025 11:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1030,20 +1030,20 @@ File: ganesha.jpg Graphic file (type bmp)
 
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 270
+LaTeX Font Info:    Trying to load font information for U+msa on input line 271
 .
 
 (C:\Users\Harry\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 270
+LaTeX Font Info:    Trying to load font information for U+msb on input line 271
 .
 
 (C:\Users\Harry\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (82.45271pt too wide) in paragraph at lines 270--275
-[][] 
+Overfull \hbox (9.06712pt too wide) in paragraph at lines 271--276
+ [] 
  []
 
 [1] (ProposalTA.toc)
@@ -1068,62 +1068,62 @@ Overfull \hbox (82.45271pt too wide) in paragraph at lines 270--275
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 322.
+(hyperref)                removing `\<let>-command' on input line 324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 322.
+(hyperref)                removing `\\' on input line 324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@centercr' on input line 322.
+(hyperref)                removing `\@centercr' on input line 324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightskip' on input line 322.
+(hyperref)                removing `\rightskip' on input line 324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 322.
+(hyperref)                removing `\@flushglue' on input line 324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftskip' on input line 322.
+(hyperref)                removing `\leftskip' on input line 324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 322.
+(hyperref)                removing `\@flushglue' on input line 324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\finalhyphendemerits' on input line 322.
+(hyperref)                removing `\finalhyphendemerits' on input line 324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 322.
+(hyperref)                removing `\z@' on input line 324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parindent' on input line 322.
+(hyperref)                removing `\parindent' on input line 324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 322.
+(hyperref)                removing `\z@' on input line 324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parfillskip' on input line 322.
+(hyperref)                removing `\parfillskip' on input line 324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@skip' on input line 322.
+(hyperref)                removing `\z@skip' on input line 324.
 
 [5
 
 ]
 Bab I.
 
-Overfull \hbox (6.23563pt too wide) in paragraph at lines 361--362
+Overfull \hbox (6.23563pt too wide) in paragraph at lines 363--364
 \TU/TimesNewRoman(0)/m/n/12 dak wajar pada wajah dengan metode deteksi \TU/Time
 sNewRoman(0)/m/it/12 Convolutional Neural Networks \TU/TimesNewRoman(0)/m/n/12 
 (CNNs)
@@ -1133,13 +1133,13 @@ sNewRoman(0)/m/it/12 Convolutional Neural Networks \TU/TimesNewRoman(0)/m/n/12
 
 
 ] [2]
-Overfull \hbox (6.58292pt too wide) in paragraph at lines 388--389
+Overfull \hbox (6.58292pt too wide) in paragraph at lines 390--391
 []\TU/TimesNewRoman(0)/m/n/12 Langkah-langkah pencarian, pengelompokan, dan pen
 apisan literatur atau sum-
  []
 
 
-Overfull \hbox (0.90164pt too wide) in paragraph at lines 388--389
+Overfull \hbox (0.90164pt too wide) in paragraph at lines 390--391
 \TU/TimesNewRoman(0)/m/n/12 ber informasi untuk mengumpulkan informasi yang rel
 evan tentang topik yang
  []
@@ -1156,7 +1156,7 @@ File: gambar1.png Graphic file (type bmp)
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 456.
+nput line 458.
 
 [6]
 Bab III.
@@ -1171,7 +1171,7 @@ Bab V.
 [11
 
 ]
-Overfull \hbox (6.60919pt too wide) in paragraph at lines 524--524
+Overfull \hbox (6.60919pt too wide) in paragraph at lines 526--526
 [][]\TU/TimesNewRoman(0)/m/n/12 Laudon, Kenneth C., dan Jane P. Laudon. 2020. \
 TU/TimesNewRoman(0)/m/it/12 Sistem Informasi Manajemen. \TU/TimesNewRoman(0)/m/
 n/12 Jakarta:

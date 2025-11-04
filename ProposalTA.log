@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.10.28)  29 OCT 2025 15:42
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.10.28)  4 NOV 2025 11:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1313,25 +1313,59 @@ File: image/Dataset.png Graphic file (type bmp)
 
 [16]
 Bab III.
+File: image/GambarIII.png Graphic file (type bmp)
+<image/GambarIII.png>
 
 
 [17
 
-]) (Bab IV - Desain-Konsep-Solusi.tex
+]
 
 [18]
+Underfull \hbox (badness 2478) in paragraph at lines 56--57
+[]\TU/TimesNewRoman(0)/m/it/12 Dataset \TU/TimesNewRoman(0)/m/n/12 harus merepr
+esentasikan keragaman
+ []
+
+
+Overfull \hbox (10.3323pt too wide) in paragraph at lines 50--69
+ [][] 
+ []
+
+
+Overfull \hbox (1.0032pt too wide) in paragraph at lines 72--73
+\TU/TimesNewRoman(0)/m/n/12 Berikut ini adalah Tabel [][]III.2[][] yang berisi 
+atribut-atribut mengenai bagaimana (\TU/TimesNewRoman(0)/m/it/12 HOW\TU/TimesNe
+wRoman(0)/m/n/12 )
+ []
+
+
+Overfull \hbox (38.6741pt too wide) in paragraph at lines 78--91
+ [][] 
+ []
+
+
 
 [19]
+Overfull \hbox (60.28647pt too wide) in paragraph at lines 123--142
+ [][] 
+ []
+
+
+
+[20]) (Bab IV - Desain-Konsep-Solusi.tex
+
+[21]
 Bab IV.
 ) (Bab V - Rencana-Selanjutnya.tex
 
-[20
+[22
 
 ]
 Bab V.
 )
 
-[21
+[23
 
 ]
 Overfull \hbox (14.40468pt too wide) in paragraph at lines 378--378
@@ -1347,7 +1381,7 @@ Overfull \hbox (16.2692pt too wide) in paragraph at lines 378--378
 
 
 
-[22
+[24
 
 
 ]
@@ -1362,24 +1396,29 @@ See the caption package documentation for explanation.
 
 
 
-[23] (ProposalTA.aux)
+[25] (ProposalTA.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-10-09>
  ***********
 Package rerunfilecheck Info: File `ProposalTA.out' has not changed.
 (rerunfilecheck)             Checksum: 571EB9C1BB2E32C2286FE829C6201D40;4576.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
 Package logreq Info: Writing requests to 'ProposalTA.run.xml'.
 \openout1 = `ProposalTA.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31414 strings out of 403196
- 616691 string characters out of 5455919
- 1973038 words of memory out of 5000000
- 59585 multiletter control sequences out of 15000+600000
+ 31421 strings out of 403196
+ 616790 string characters out of 5455919
+ 1975331 words of memory out of 5000000
+ 59591 multiletter control sequences out of 15000+600000
  632934 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,10n,93p,1201b,6875s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on ProposalTA.pdf (29 pages).
+Output written on ProposalTA.pdf (31 pages).

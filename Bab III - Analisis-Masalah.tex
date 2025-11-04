@@ -7,18 +7,138 @@
 \chapter{ANALISIS MASALAH}
 \label{chap:analisis-masalah}
 \section{Analisis Kondisi Saat Ini}
-Menurut \textcite{laudon2020}, gambarkan terlebih dahulu model konseptual sistem yang ada saat ini. Model konseptual ini berisi berbagai komponen atau subsitem dan interaksi antarsubsistem tersebut. Setelah itu, berikan penjelasan tentang masalah yang ada pada sistem tersebut. Paragraf berikut berisi contoh penjabaran masalah sistem informasi fasilitas kesehatan untuk pasien \autocite{pressman2019}. 
+Sistem deteksi \textit{deepfake} yang ada saat ini dapat dimodelkan sebagai sebuah alur proses yang bergantung penuh pada ketersediaan data pelatihan. Gambar \ref{gambar:III-1} menggambarkan model konseptual dari alur kerja deteksi \textit{deepfake} yang umum digunakan saat ini di Indonesia.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{image/GambarIII.png}
+    \caption{Model Konseptual Alur Deteksi \textit{Deepfake} Saat Ini}
+    \label{gambar:III-1}
+\end{figure}
+
+Alur kerja dari model konseptual dimulai dari \textit{dataset} publik yang telah banyak ditinjau dalam studi literatur, seperti FaceForensics , Celeb-DFv2 , dan DFDC \autocite{sohan2023}. Sebagian besar dataset ini memiliki karakteristik utama berupa wajah non-Indonesia dan video dengan resolusi yang masih tergolong tinggi. Dataset ini yang kemudian digunakan untuk proses pelatihan , dilanjutkan dengan arsitektur \textit{deep learning} belajar mengenali pola dan artefak manipulasi. Hasil dari proses ini adalah sebuah model deteksi yang menunjukkan performa sangat tinggi di lingkungan laboratorium.
+
+Namun, seperti yang telah diidentifikasi dalam studi literatur , masalah fundamental muncul apabila model tersebut digunakan untuk mendeteksi \textit{deepfake} dalam konteks dunia nyata di Indonesia. Video-video di Indonesia berisi orang-orang lokal (Indonesia) dan, yang lebih penting, mengalami kompresi agresif akibat penyebaran di sosial media serta \textit{bandwidth} internet yang tidak merata.
+
+Kondisi ini sejalan dengan temuan \autocite{montibeller2025}, yang menyatakan bahwa kompresi video secara signifikan merusak fitur forensik tingkat rendah, sehingga menyulitkan detektor. Akibat dari kesenjangan data (distribusi \textit{out-of-distribution}) antara data latih (resolusi tinggi, non-Indonesia) dengan data di lapangan (resolusi rendah, Indonesia) , performa model yang sebelumnya tinggi dapat menurun drastis. Kondisi inilah yang menjadi justifikasi utama perlunya pengembangan \textit{dataset} baru yang dapat menjembatani kesenjangan tersebut.
+
 \section{Analisis Kebutuhan}
-\lipsum[4]
+Berikut ini adalah penjabaran terkait kebutuhan-kebutuhan untuk membuat \textit{dataset} yang baru.
+
 \subsection{Identifikasi Masalah Pengguna}
-\lipsum[5]
+Pengguna sistem ini adalah Steven (pembuat model) dan peneliti lain di bidang deteksi \textit{deepfake}. Masalah yang dihadapi oleh para pengguna adalah:
+\begin{enumerate}
+    \item Steven (pembuat model)
+        \begin{enumerate}[label=\alph*.]
+            \item Steven membutuhkan data pelatihan yang memadai untuk membuat model yang \textit{robust} terhadap video berkualitas rendah di Indonesia.
+            \item Modelnya mungkin akan \textit{overfitting} pada video berkualitas tinggi dan gagal di skenario dunia nyata Indonesia.
+        \end{enumerate}
+    \item Peneliti lainnya
+        \begin{enumerate}[label=\alph*.]
+            \item Peneliti tidak memiliki \textit{benchmark dataset} untuk menguji validitas model deteksi \textit{deepfake} mereka dalam konteks Indonesia.
+        \end{enumerate}
+\end{enumerate}
+
+Untuk mencari solusi atas masalah-masalah tersebut, perlu disusun kebutuhan fungsional dan nonfungsional sistem yang diperlukan. Subbab berikut menjabarkan kebutuhan-kebutuhan tersebut.
+
 \subsection{Kebutuhan Fungsional}
-\lipsum[6]
+Berikut ini adalah Tabel \ref{tab:kebutuhan-fungsional} yang berisi kebutuhan-kebutuhan fungsional yang dibutuhkan untuk menjawab masalah-masalah tersebut.
+
+\begin{table}[H] % Menggunakan [H] dari paket float untuk memaksa posisi
+    \centering
+    \caption{Kebutuhan Fungsional Dataset}
+    \label{tab:kebutuhan-fungsional}
+    \begin{tabular}{|l|l|p{8cm}|} % l=rata kiri, p{lebar}=paragraf rata kiri
+        \hline
+        \textbf{Kode} & \textbf{Kebutuhan Fungsional} & \textbf{Deskripsi} \\
+        \hline
+        F-01 & Konteks Lokal & \textit{Dataset} harus berisi video asli yang menampilkan wajah orang Indonesia yang beragam. \\
+        \hline
+        F-02 & Representasi Etnis & \textit{Dataset} harus merepresentasikan keragaman suku bangsa utama di Indonesia. \\
+        \hline
+        F-03 & Teknik Relevan & \textit{Dataset} harus berisi video palsu yang dibuat menggunakan teknik \textit{deepfake} yang umum, seperti visual \textit{deepfake}, audio \textit{deepfake}, maupun \textit{multimodal deepfake}. \\
+        \hline
+        F-04 & Simulasi Kompresi & \textit{Dataset} harus menyertakan versi video (asli dan palsu) yang telah disimulasikan efek kompresinya untuk meniru kualitas rendah di media sosial. \\
+        \hline
+        F-05 & Pelabelan Jelas & Setiap video dalam \textit{dataset} harus memiliki label yang jelas. \\
+        \hline
+        F-06 & Metadata Lengkap & \textit{Dataset} harus disertai \textit{metadata} yang detail untuk setiap video palsu. \\
+        \hline
+        F-07 & Keseimbangan Data & \textit{Dataset} harus memiliki keseimbangan yang wajar antara jumlah video asli dan palsu, serta antara video berkualitas tinggi dan rendah. \\
+        \hline
+    \end{tabular}
+\end{table}
+
 \subsection{Kebutuhan Nonfungsional}
-\lipsum[7]
+Berikut ini adalah Tabel \ref{tab:kebutuhan-non-fungsional} yang berisi atribut-atribut mengenai bagaimana (\textit{HOW}) sistem bekerja.
+
+\begin{table}[H] % Menggunakan [H] dari paket float untuk memaksa posisi
+    \centering
+    \caption{Kebutuhan Non Fungsional Dataset}
+    \label{tab:kebutuhan-non-fungsional}
+    \begin{tabular}{|l|l|p{8cm}|} % l=rata kiri, p{lebar}=paragraf rata kiri
+        \hline
+        \textbf{Kode} & \textbf{Kebutuhan Non Fungsional} & \textbf{Penjelasan} \\
+        \hline
+        NF-01 & Relevansi & \textit{Dataset} harus sangat relevan dengan masalah disinformasi \textit{deepfake} di Indonesia. \\
+        \hline
+        NF-02 & Keberagaman & \textit{Dataset} harus beragam, tidak hanya dari segi etnis, tetapi juga pencahayaan, latar belakang, dan usia subjek. \\
+        \hline
+        NF-03 & Validitas & Label harus 100\% akurat. Proses validasi harus memastikan tidak ada kesalahan pelabelan. \\
+        \hline
+        NF-04 & Realisme & Video berkualitas rendah yang dihasilkan harus secara akurat mencerminkan artefak kompresi yang ditemukan di platform nyata. \\
+        \hline
+    \end{tabular}
+\end{table}
 
 \section{Analisis Pemilihan Solusi}
+Berikut ini adalah beberapa alternatif solusi yang diusulkan beserta metode dalam penentuan solusi.
+
 \subsection{Alternatif Solusi}
-\lipsum[8]
+Berikut ini adalah Tabel \ref{tab:alternatif-solusi} yang menampilkan beberapa alternatif solusi yang diajukan untuk memenuhi kebutuhan akan \textit{dataset} \textit{deepfake} berkualitas rendah di Indonesia.
+
+\begin{table}[H] % Menggunakan [H] dari paket float untuk memaksa posisi
+    \centering
+    \caption{Alternatif Solusi Dataset}
+    \label{tab:alternatif-solusi}
+    \begin{tabular}{|c|p{10cm}|} % c=rata tengah, p{lebar}=paragraf rata kiri
+        \hline
+        \textbf{Alternatif Solusi} & \textbf{Solusi} \\
+        \hline
+        1 & Mengambil \textit{dataset} yang ada dan hanya menerapkan simulasi kompresi pada video-video tersebut. \\
+        \hline
+        2 & Hanya mengumpulkan video \textit{deepfake} yang sudah beredar di media sosial Indonesia. \\
+        \hline
+        3 & Mengumpulkan video asli lokal, membuat \textit{deepfake} sendiri, dan menerapkan kompresi secara sistematis. \\
+        \hline
+    \end{tabular}
+\end{table}
+
 \subsection{Analisis Penentuan Solusi}
-\lipsum[9]
+Berikut ini adalah Tabel \ref{tab:analisis-solusi} yang menampilkan beberapa alternatif solusi yang diajukan untuk memenuhi kebutuhan akan \textit{dataset} \textit{deepfake} berkualitas rendah di Indonesia.
+
+\begin{table}[H] % Menggunakan [H] dari paket float untuk memaksa posisi
+    \centering
+    \caption{Analisis Penentuan Solusi Dataset}
+    \label{tab:analisis-solusi}
+    \begin{tabular}{|l|c|c|c|} % l=rata kiri, c=rata tengah
+        \hline
+        \textbf{Kebutuhan Fungsional} & \textbf{Alternatif Solusi 1} & \textbf{Alternatif Solusi 2} & \textbf{Alternatif Solusi 3} \\
+        \hline
+        F-01 (Konteks Lokal) & Tidak Terpenuhi & Terpenuhi & Terpenuhi \\
+        \hline
+        F-02 (Representasi Etnis) & Tidak Terpenuhi & Tidak Terkontrol & Terpenuhi \\
+        \hline
+        F-03 (Teknik Relevan) & Terpenuhi & Tidak Diketahui & Terpenuhi \\
+        \hline
+        F-04 (Simulasi Kompresi) & Terpenuhi & Kompresi Acak & Terpenuhi \\
+        \hline
+        F-05 (Pelabelan Jelas) & Terpenuhi & Tidak Terkontrol & Terpenuhi \\
+        \hline
+        F-06 (Metadata Lengkap) & Tidak Terpenuhi & Tidak Diketahui & Terpenuhi \\
+        \hline
+        F-07 (Keseimbangan Data) & Tergantung Dataset & Tidak Seimbang & Terpenuhi \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Berdasarkan Tabel \ref{tab:analisis-solusi}, dapat disimpulkan bahwa alternatif solusi 3 (Mengumpulkan video asli lokal, membuat \textit{deepfake} sendiri, dan menerapkan kompresi secara sistematis) adalah satu-satunya yang dapat memenuhi semua kebutuhan fungsional yang diidentifikasi. Solusi ini memberikan kontrol penuh atas konteks, jenis manipulasi, tingkat kompresi, dan pelabelan, yang sangat penting untuk tujuan penelitian.

@@ -1,0 +1,211 @@
+% ==========================================
+% BAB II STUDI LITERATUR
+% ==========================================
+\chapter{STUDI LITERATUR}
+\label{chap:studi-literatur}
+\section{\textit{Data-Centric Artificial Intelligence}}
+\textit{Data-centric artificial intelligence} adalah disiplin yang diterapkan untuk merekayasa data yang digunakan dalam membangun sistem AI secara sistematis. Ini merupakan perubahan dari yang sebelumnya yang berupa \textit{model-centric}, peneliti fokus mengubah model sambil membiarkan data tetap.  
+Keberhasilan dalam AI tentu bergantung pada kualitas data yang dimiliki, dalam konteks \textit{deepfake} terutama di Indonesia, sumber data yang relevan tentu dibutuhkan pula. Kualitas data sangat memengaruhi kinerja model dalam mendeteksi \textit{deepfake} pula, model tentu sangat penting dalam mendeteksi \textit{deepfake} tetapi \textit{dataset} yang baik juga tidak kalah penting. Oleh karena itu, dibutuhkan \textit{dataset} yang baik untuk mendukung pembentukan model yang baik pula. 
+
+\begin{figure}[h!] % pilihan opsi yang disarankan: t = top, b = bottom, h = here
+	\centering
+  \captionsetup{justification=centering}
+    	\includegraphics[width=0.7\textwidth]{image/DataCentric.png}
+	\caption{Pilar Utama \textit{Data-Centric AI}}
+	\label{gambar:Pilar-Utama}
+\end{figure}
+
+Berdasarkan gambar \ref{gambar:Pilar-Utama}, terdapat tiga pilar utama dari \textit{data-centric AI}. Pada penelitian ini, terdapat dua pilar utama dari \textit{ data-centric AI} yang difokuskan yaitu Pengembangan Data Pelatihan (\textit{Training Data Development}) dan Pengembangan Data Inferensi (\textit{Inference Data Development}). 
+Tahapan dalam Pengembangan Data Pelatihan (\textit{Training Data Development}) terdiri dari : 
+
+\begin{enumerate}
+  \item Pengumpulan Data (\textit{Data Collection}) \\
+  Pengumpulan data adalah proses mengumpulkan dan memperoleh data dari berbagai sumber. Proses ini secara fundamental menentukan kualitas dan kuantitas data. Proses ini sangat bergantung pada \textit{domain knowledge} untuk memastikan data yang dikumpulkan relevan, representatif, dan selaras dengan tujuan pemangku kepentingan.
+  
+  \item Pelabelan Data (\textit{Data Labeling}) \\ 
+  Pelabelan data adalah proses memberikan satu atau lebih \textit{tag} atau label deskriptif ke \textit{dataset}. Proses ini memungkinkan algoritma untuk belajar dari data dan membuat prediksi. Pelabelan memainkan peran krusial dalam memastikan bahwa model yang dilatih pada data tersebut secara akurat mencerminkan intensi atau harapan manusia.
+  
+  \item Augmentasi Data (\textit{Data Augmentation}) \\
+  Augmentasi data adalah teknik untuk meningkatkan ukuran (\textit{size}) dan keragaman (\textit{diversity}) data dengan cara membuat variasi buatan dari data yang ada. Teknik ini seringkali dapat meningkatkan kinerja model. Augmentasi data sangat penting karena algoritma pembelajaran mesin modern, terutama \textit{deep learning}, seringkali membutuhkan data dalam jumlah besar untuk belajar secara efektif.
+
+\end{enumerate}
+
+Sedangkan, tahapan dari Pengembangan Data Inferensi (\textit{Inference Data Development}) terdiri dari :
+\begin{enumerate}
+  \item Evaluasi \textit{Out-of-Distribution} \\
+  Evaluasi \textit{Out-of-Distribution} mengacu pada penggunaan sekumpulan sampel data yang mengikuti distribusi yang berbeda dari yang diamati dalam data pelatihan.
+  
+  \item Pemilahan Data (\textit{Data Slicing}) \\
+  \textit{Data slicing} adalah bagian dari evaluasi \textit{in-distribution}.
+
+Ini didefinisikan sebagai proses mempartisi membagi \textit{dataset} menjadi sub-populasi yang relevan dan mengevaluasi kinerja model pada setiap sub-populasi tersebut secara terpisah \autocite{zha2023}. 
+\end{enumerate}
+
+\section{Metodologi Pengembangan \textit{Dataset}}
+Pengembangan dataset dalam \textit{machine learning} modern semakin diakui sebagai proses yang krusial dan kompleks, yang membutuhkan metodologi terstruktur untuk memastikan transparansi, akuntabilitas, dan tanggung jawab etis. Mengambil analogi dari lembar data di industri elektronik yang merinci karakteristik komponen, \autocite{gebru2021} mengusulkan agar setiap dataset disertai dengan lembar data serupa. Tujuan utamanya adalah untuk meningkatkan transparansi dan akuntabilitas dalam komunitas \textit{machine learning}. Metodologi ini dirancang untuk melayani dua pemangku kepentingan utama: pembuat dataset dan konsumen \textit{dataset}. Bagi pembuat, proses ini mendorong refleksi yang cermat terhadap asumsi, potensi risiko, dan implikasi penggunaan \textit{dataset}; proses refleksi ini sengaja dirancang untuk tidak otomatis. Bagi konsumen, lembar data menyediakan informasi yang diperlukan untuk membuat keputusan yang tepat tentang penggunaan \textit{dataset} dan menghindari penyalahgunaan \autocite{gebru2021}.
+
+Melengkapi kerangka kerja dokumentasi tersebut, \autocite{orr2024} mengeksplorasi praktik dan proses penciptaan \textit{dataset} yang bertanggung jawab dari perspektif pembuatnya. Melalui wawancara mendalam dengan 18 pembuat \textit{dataset} terkemuka, mereka mengidentifikasi bahwa pekerjaan \textit{dataset} seringkali terfragmentasi, kurang dihargai, dan para pembuatnya sering belajar dari kesalahan secara terisolasi \autocite{orr2024}. Studi ini menyajikan tujuh rekomendasi metodologis utama yang berasal dari pengalaman praktis para pembuat \textit{dataset}, yang memberikan panduan tentang bagaimana melaksanakan siklus hidup yang diidentifikasi oleh \autocite{gebru2021}.
+
+Studi Orr dan Crawford menyajikan tujuh rekomendasi metodologis utama yang berasal dari pengalaman praktis para pembuat \textit{dataset}. Rekomendasi ini memberikan panduan praktis tentang bagaimana melaksanakan tahapan siklus hidup yang diidentifikasi oleh Gebru et al.
+
+\begin{enumerate}
+  \item Diversifikasi dan Audit \\
+  Metodologi pengembangan harus secara aktif mendiversifikasi \textit{dataset} tidak hanya secara demografis tetapi juga dalam atribut data untuk menghindari sinyal palsu. Ini harus disertai dengan audit menyeluruh untuk melaporkan distribusi data secara jujur.
+
+  \item Upayakan Kualitas Tinggi \\
+  Kualitas adalah pilar metodologis, yang dicapai melalui validasi data dan inspeksi manual , serta proses kurasi dan pembersihan yang disiplin.
+
+  \item Mulai Lebih Awal dan Iterasi \\
+  Proses pengembangan \textit{dataset} bersifat iteratif. Para pembuat merekomendasikan untuk menerima kesalahan sebagai hal yang tak terhindarkan dan menggunakan \textit{rapid iteration} untuk perbaikan berkelanjutan, terutama saat bekerja dengan \textit{crowd worker}.
+
+  \item Dokumentasi Terbuka dan Komunikasi Keterbatasan \\
+  Menegaskan kembali pentingnya "Datasheets", Orr dan Crawford menyoroti perlunya mendokumentasikan secara terbuka untuk mengatasi "documentation debt" dan memastikan reproduktifitas. Ini juga mencakup komunikasi berkelanjutan tentang keterbatasan bahkan setelah \textit{dataset} dirilis.
+  
+  \item Desain Berpusat Pengguna dan Pembatasan Penggunaan \\
+  Metodologi yang bertanggung jawab menuntut pembuat untuk mendefinisikan kasus penggunaan yang dimaksud dan secara aktif mengantisipasi potensi bahaya atau penggunaan yang tidak diinginkan. Jika risiko penyalahgunaan terlalu tinggi, pembuat harus berani untuk tidak merilis \textit{dataset}.
+
+  \item Atasi Privasi dan Persetujuan \\
+  Pembuat \textit{dataset} didesak untuk mempertimbangkan privasi melampaui kewajiban hukum. Ini termasuk praktik seperti \textit{scrapping} yang "sopan" (\textit{polite}) dan mengevaluasi kembali asumsi bahwa data yang tersedia untuk umum menyiratkan persetujuan untuk digunakan dalam pelatihan model.
+
+  \item Buat \textit{Dataset} yang Dibutuhkan \\
+  Terakhir, para praktisi merekomendasikan untuk tidak hanya bergantung pada data yang ditemukan. Metodologi yang kuat harus mencakup upaya untuk membuat \textit{dataset} baru yang sesuai \textit{fit-for-purpose}, meskipun membutuhkan lebih banyak sumber daya.
+
+\end{enumerate}
+
+\section{Kelompok Suku Bangsa Indonesia}
+
+% --- PINDAHKAN BLOK FIGURE INI KE ATAS ---
+\begin{figure}[H] % pilihan opsi [h!] meminta LaTeX menempatkannya "di sini"
+	\centering
+  \captionsetup{justification=centering}
+    	\includegraphics[width=0.7\textwidth]{image/Suku.png}
+	\caption{Gambar Jumlah Penduduk Berdasarkan Kelompok Suku Bangsa Pada Sensus Penduduk 2010}
+	\label{gambar:Suku-Bangsa}
+\end{figure}
+% --- AKHIR DARI BLOK FIGURE YANG DIPINDAHKAN ---
+
+% --- Teks ini sekarang muncul SETELAH gambar ---
+Berdasarkan data dari Sensus Penduduk 2010 pada gambar \ref{gambar:Suku-Bangsa}, didapat bahwa Indonesia memiliki kelompok suku bangsa yang sangat beragam \autocite{bps2012}. % <-- Tambahkan sitasi jika perlu
+Oleh karena itu untuk merepresentasikan Indonesia diputuskan untuk mengambil 2 suku terbanyak di setiap pulau di Indonesia beserta kelompok suku representatif lainnya.
+
+Berikut ini adalah tabel pengelompokan 2 suku terbesar pada setiap pulau di Indonesia beserta kelompok representatif yang akan digunakan.
+
+% ... (Kode untuk Tabel \ref{tab:suku-bangsa} tetap di sini) ...
+
+% --- Kode untuk tabelnya ---
+\begin{table}[H] % Opsi penempatan [ht] = here/top
+    \centering
+    \caption{Pengelompokan 2 suku Terbesar Pada Setiap Pulau di Indonesia Beserta Kelompok Representatif Berdasarkan Sensus Penduduk 2010} % Judul tabel
+    \label{tab:suku-bangsa} % Label untuk referensi silang
+    \begin{tabular}{|l|l|r|} % l=left, r=right alignment; | = vertical line
+        \hline
+        \textbf{Wilayah} & \textbf{Suku} & \textbf{Persentase} \\
+        \hline
+        \multirow{2}{*}{Jawa} & Jawa & 40,22\% \\ % \multirow{2}{*}{...} = gabung 2 baris
+         & Sunda & 15,5\% \\
+        \hline
+        \multirow{2}{*}{Sumatra} & Batak & 3,58\% \\
+         & Minangkabau & 2,73\% \\
+        \hline
+        \multirow{2}{*}{Kalimantan} & Banjar & 1,74\% \\
+         & Dayak & 1,27\% \\
+        \hline
+        \multirow{2}{*}{Sulawesi} & Bugis & 2,69\% \\
+         & Makassar & 1,13\% \\
+        \hline
+        \multirow{2}{*}{Bali \& Nusa Tenggara} & Bali & 1,67\% \\
+         & Sasak & 1,34\% \\
+        \hline
+        Kelompok Representatif & Cina & 1,2\% \\ % Baris terakhir tidak perlu multirow
+        \hline
+    \end{tabular}
+\end{table}
+
+Berdasarkan tabel \ref{tab:suku-bangsa}, dengan strategi pengambilan sampel berstrata berdasarkan wilayah ini, kesebelas kelompok suku bangsa tersebut dipilih untuk memastikan dataset yang dibangun dapat mewakili keragaman suku utama di Indonesia secara lebih berimbang, tidak hanya terkonsentrasi pada populasi mayoritas.
+
+\section{Klasifikasi Deepfake}
+\begin{figure}[H] % pilihan opsi [h!] meminta LaTeX menempatkannya "di sini"
+	\centering
+  \captionsetup{justification=centering}
+    	\includegraphics[width=0.7\textwidth]{image/Deepfake.png}
+	\caption{Jenis-Jenis \textit{Deepfake}}
+	\label{gambar:deepfake}
+\end{figure}
+
+Berdasarkan survei komprehensif oleh \autocite{croitoru2024}, media \textit{deepfake} didefinisikan sebagai file gambar, video, atau audio yang diubah secara digital atau dibuat dari awal menggunakan alat \textit{AI}. Tinjauan literatur dalam penelitian tersebut secara khusus mencakup semua jenis media \textit{deepfake}, yang dikategorikan ke dalam empat domain utama: gambar, video, audio, dan konten multimodal (\textit{audio-visual}). Subbab berikut akan menguraikan klasifikasi ini secara rinci, dimulai dari \textit{deepfake} visual (yang mencakup gambar dan video), diikuti oleh \textit{deepfake} audio, dan \textit{deepfake} multimodal. Prosedur-prosedur ini, yang diilustrasikan pada Gambar \ref{gambar:deepfake}, dapat bersifat \textit{domain-agnostic} (berlaku di berbagai jenis media) atau \textit{domain-specific} (hanya berlaku untuk media tertentu saja).
+
+\subsection{\textit{Visual Deepfake}}
+\textit{Visual deepfake} merujuk pada media gambar atau video yang telah diubah atau dibuat dari awal menggunakan alat AI. Tujuannya adalah untuk memanipulasi konten visual, paling sering menargetkan wajah manusia. Berikut ini adalah jenis-jenis utama visual \textit{deepfake}:
+\begin{enumerate}
+    \item \textit{Identity Swapping (Face Swapping)} \\
+    Ini adalah jenis \textit{deepfake} yang paling umum, identitas (wajah) seseorang dalam gambar atau video target diganti dengan identitas orang lain (sumber). Teknik ini berusaha mempertahankan atribut non-identitas dari target, seperti ekspresi wajah.
+
+    \item \textit{Facial Expression Swapping (Face Reenactment)} \\
+    Berbeda dengan \textit{face swapping}, teknik ini tidak mengubah identitas seseorang, melainkan memodifikasi ekspresi atau emosi wajah. Dalam domain video, ini sering disebut \textit{face reenactment}, gerakan wajah target diubah, seringkali meniru gerakan dari video sumber.
+
+    \item \textit{Facial Attribute Manipulation} \\
+    Teknik ini berfokus pada pengubahan atribut semantik tertentu pada wajah sambil mempertahankan identitas aslinya. Atribut yang umum diubah meliputi usia, jenis kelamin, warna kulit, atau gaya rambut.
+
+    \item \textit{Text-to-Image/Video Generation} \\
+    Dengan kemajuan model difusi, \textit{deepfake} visual kini dapat dibuat hanya dengan menggunakan perintah teks (\textit{prompt}). Pengguna dapat menentukan detail seperti nama orang, atribut wajah, dan tindakan yang harus dilakukan.
+
+    \item \textit{Background Swapping} \\
+    Jenis manipulasi ini mengubah pemandangan latar belakang pada konten visual, biasanya dengan mensegmentasi orang di latar depan dan menempatkannya di latar belakang yang baru \autocite{croitoru2024}.
+\end{enumerate}
+
+\subsection{\textit{Audio Deepfake}}
+\textit{Audio deepfake} adalah file audio yang dimanipulasi atau dihasilkan oleh AI. Tujuannya sering kali untuk meniru suara seseorang atau mengubah konten ucapan. Jenis-jenis utama audio \textit{deepfake} yang dibahas meliputi:
+\begin{enumerate}
+    \item \textit{Identity Swapping (Voice Conversion)} \\
+    Dalam konteks audio, ini dikenal sebagai \textit{voice conversion} atau \textit{voice swapping}. Tujuannya adalah untuk mengubah warna suara dan irama dari seorang pembicara agar terdengar seperti pembicara lain, sambil tetap mempertahankan isi pidato aslinya.
+
+    \item \textit{Emotion Swapping} \\
+    Teknik ini mengubah emosi dalam sebuah rekaman ucapan (misalnya, dari tenang menjadi marah) tanpa mengubah isi konten atau identitas pembicara.
+
+    \item \textit{Text-to-Speech (TTS) Synthesis} \\
+    Ini adalah proses pembuatan audio \textit{deepfake} menggunakan model \textit{machine learning} untuk sintesis ucapan dari input teks. Model TTS modern dapat menghasilkan ucapan yang terdengar alami dan mampu meniru suara identitas sumber tertentu.
+
+    \item \textit{Partial Synthesis} \\
+    Jenis manipulasi ini hanya mengubah sebagian dari file media. Dalam domain audio, ini berarti mengubah sebagian kata dalam sebuah ucapan, sambil memastikan identitas target tetap terjaga di seluruh klip audio \autocite{croitoru2024}.
+\end{enumerate}
+
+\subsection{\textit{Multimodal Deepfake}}
+\textit{Multimodal deepfake} adalah manipulasi yang melibatkan lebih dari satu jenis media secara bersamaan. Berikut ini adalah contoh dari multimodal \textit{deepfake}:
+\begin{enumerate}
+    \item \textit{Talking Face Synthesis} \\
+    Ini adalah contoh utama dari \textit{deepfake} multimodal, yang digambarkan sebagai prosedur kompleks untuk menghasilkan file \textit{audio-video} dari wajah yang berbicara. Proses ini dapat dikondisikan oleh berbagai input seperti teks, audio, atau video. Tujuannya adalah untuk menghasilkan video gerakan bibir, ekspresi wajah, gerakan kepala, dan ucapan yang dihasilkan semuanya konsisten dan tersinkronisasi \autocite{croitoru2024}.
+\end{enumerate}
+
+\section{\textit{Dataset} Terdahulu}
+\begin{figure}[H] % pilihan opsi [h!] meminta LaTeX menempatkannya "di sini"
+	\centering
+  \captionsetup{justification=centering}
+    	\includegraphics[width=0.7\textwidth]{image/Dataset.png}
+	\caption{\textit{Dataset Deepfake} Terdahulu}
+	\label{gambar:dataset}
+\end{figure}
+
+Gambar \ref{gambar:dataset} menyajikan informasi fundamental mengenai \textit{dataset-dataset} deteksi video \textit{deepfake} yang sudah ada. \textit{Dataset-dataset} ini, yang dirilis antara Maret 2018 hingga Juli 2021, digunakan secara luas dalam penelitian deteksi \textit{deepfake}. Sumber video untuk \textit{dataset} ini bervariasi, termasuk YouTube, partisipan berbayar, video yang dikumpulkan dari internet secara umum, dan partisipan sukarela.
+Berikut adalah daftar \textit{dataset} yang disebutkan beserta beberapa detailnya:
+\begin{enumerate}
+    \item \textit{FaceForensics}: Dirilis Maret 2018, bersumber dari \textit{YouTube}, berisi 1.004 video asli dan 1.004 video palsu.
+    \item \textit{FaceForensics++}: Dirilis Januari 2019, bersumber dari \textit{YouTube}, berisi 1.000 video asli dan 4.000 video palsu.
+    \item \textit{DeepFakeDetection}: Dirilis September 2019, bersumber dari partisipan berbayar, berisi 363 video asli dan 3.068 video palsu.
+    \item \textit{UADFV}: Dirilis November 2018, bersumber dari \textit{YouTube}, berisi 49 video asli dan 49 video palsu.
+    \item \textit{DeepfakeTIMIT}: Dirilis Desember 2018, berisi 620 video palsu. Jumlah video asli tidak disebutkan dalam tabel ini.
+    \item \textit{Celeb-DF}: Dirilis September 2019, bersumber dari \textit{YouTube}, berisi 408 video asli dan 795 video palsu.
+    \item \textit{Celeb-DFv2}: Dirilis November 2019, bersumber dari \textit{YouTube}, berisi 590 video asli dan 5.639 video palsu.
+    \item \textit{DFDC preview}: Dirilis Oktober 2019, bersumber dari partisipan berbayar, berisi 1.131 video asli dan 4.119 video palsu.
+    \item \textit{DFDC}: Dirilis Juni 2020, bersumber dari partisipan berbayar, berisi 23.654 video asli dan 104.500 video palsu.
+    \item \textit{DeeperForensics-1.0}: Dirilis Januari 2020, bersumber dari partisipan berbayar dan \textit{YouTube}, berisi 50.000 video asli dan 10.000 video palsu.
+    \item \textit{WildDeepfake}: Dirilis Oktober 2020, bersumber dari koleksi online, berisi 3.805 video asli dan 3.509 video palsu.
+    \item \textit{KoDF}: Dirilis Maret 2021, bersumber dari partisipan sukarela, berisi 62.166 video asli dan 175.776 video palsu.
+    \item \textit{ForgeryNet}: Dirilis Juli 2021, berisi 99.630 video asli dan 121.617 video palsu \autocite{sohan2023}.
+\end{enumerate}
+
+\section{\textit{Deepfake} Pada Dunia Nyata}
+Kehadiran video yang dihasilkan oleh kecerdasan buatan (\textit{AI}) di media sosial menimbulkan tantangan baru bagi deteksi \textit{deepfake}. Detektor yang dilatih seringkali gagal melakukan generalisasi ke skenario dunia nyata. Salah satu faktor kunci di balik kesenjangan ini adalah kompresi agresif dan \textit{proprietary} yang diterapkan oleh platform seperti \textit{YouTube} dan \textit{Facebook}. Proses ini secara signifikan merusak fitur forensik tingkat rendah yang penting untuk membedakan konten asli dari media yang dimanipulasi. Meskipun \textit{State-of-the-Art (SoA)} metode deteksi \textit{deepfake}, seperti yang berbasis \textit{CNN} (\textit{ResNet50, DenseNet, EfficientNet, XceptionNet}) dan \textit{Vision Transformer (ViT)}, menunjukkan kinerja sangat baik di bawah kondisi laboratorium, kinerjanya menurun drastis ketika diterapkan pada \textit{deepfake} yang dibagikan di media sosial.
+
+Kompresi dan pengubahan ukuran pada media sosial dilakukan untuk mengatasi kendala \textit{bandwidth} dan penyimpanan yang sangat relevan di Indonesia. Meskipun langkah-langkah ini mengurangi ukuran file, mereka juga secara signifikan menurunkan kualitas fitur forensik yang penting untuk deteksi. Kompresi ini dapat menghilangkan atau mengaburkan artefak halus yang diperkenalkan selama proses pembuatan \textit{deepfake}, sehingga menyulitkan detektor untuk mengidentifikasi manipulasi secara akurat. Fenomena ini telah diamati secara konsisten dalam penelitian sebelumnya.
+
+Untuk menjembatani kesenjangan dengan aplikasi dunia nyata, beberapa upaya telah dilakukan, terutama dalam domain gambar. Pendekatan seperti membuat \textit{dataset} dengan gambar yang sudah dikompresi atau menggunakan \textit{fine-tuning} untuk mengadaptasi model pada data terkompresi telah diusulkan. Namun, replikasi transformasi kompresi platform untuk video dalam skala besar tetap menjadi tantangan karena keterbatasan \textit{API} dan kendala berbagi data. Artikel ini mengusulkan kerangka kerja emulasi untuk mereplikasi artefak kompresi dan \textit{resizing} video platform secara lokal, sebagai solusi untuk menghasilkan data pelatihan yang lebih realistis tanpa memerlukan akses \textit{API} langsung \autocite{montibeller2025}.

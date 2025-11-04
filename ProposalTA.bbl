@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.2 $
+% $ biblatex bbl format version 3.3 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,8 +18,8 @@
 
 
 \refsection{0}
-  \datalist[entry]{cms/global//global/global}
-    \entry{alrashoud2025}{article}{}
+  \datalist[entry]{cms/global//global/global/global}
+    \entry{alrashoud2025}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=f5d6ca7c0aa298ef1bc7b84b5386524c}{%
            family={Alrashoud},
@@ -28,15 +28,14 @@
            giveni={M\bibinitperiod},
            givenun=0}}%
       }
-      \list{publisher}{1}{%
-        {Elsevier}%
-      }
       \strng{namehash}{f5d6ca7c0aa298ef1bc7b84b5386524c}
       \strng{fullhash}{f5d6ca7c0aa298ef1bc7b84b5386524c}
+      \strng{fullhashraw}{f5d6ca7c0aa298ef1bc7b84b5386524c}
       \strng{bibnamehash}{f5d6ca7c0aa298ef1bc7b84b5386524c}
       \strng{authorbibnamehash}{f5d6ca7c0aa298ef1bc7b84b5386524c}
       \strng{authornamehash}{f5d6ca7c0aa298ef1bc7b84b5386524c}
       \strng{authorfullhash}{f5d6ca7c0aa298ef1bc7b84b5386524c}
+      \strng{authorfullhashraw}{f5d6ca7c0aa298ef1bc7b84b5386524c}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
@@ -45,15 +44,33 @@
       \field{labeltitlesource}{author}
       \field{journaltitle}{Alexandria Engineering Journal}
       \field{title}{{Deepfake video detection methods, approaches, and challenges}}
-      \field{volume}{125}
       \field{year}{2025}
-      \field{pages}{265\bibrangedash 277}
-      \range{pages}{13}
-      \verb{doi}
-      \verb 10.1016/j.aej.2025.04.007
-      \endverb
     \endentry
-    \entry{banerjee2024}{inproceedings}{}
+    \entry{bps2012}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9e8d1c6faf863da2684d21326ecf4fad}{%
+           family={{Badan Pusat Statistik}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e8d1c6faf863da2684d21326ecf4fad}
+      \strng{fullhash}{9e8d1c6faf863da2684d21326ecf4fad}
+      \strng{fullhashraw}{9e8d1c6faf863da2684d21326ecf4fad}
+      \strng{bibnamehash}{9e8d1c6faf863da2684d21326ecf4fad}
+      \strng{authorbibnamehash}{9e8d1c6faf863da2684d21326ecf4fad}
+      \strng{authornamehash}{9e8d1c6faf863da2684d21326ecf4fad}
+      \strng{authorfullhash}{9e8d1c6faf863da2684d21326ecf4fad}
+      \strng{authorfullhashraw}{9e8d1c6faf863da2684d21326ecf4fad}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Kewarganegaraan, Suku Bangsa, Agama, dan Bahasa Sehari-hari Penduduk Indonesia: Hasil Sensus Penduduk 2010}}
+      \field{type}{techreport}
+      \field{year}{2012}
+    \endentry
+    \entry{banerjee2024}{inproceedings}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=09d1321342daf40c074c5deb7695d8ae}{%
            family={Banerjee},
@@ -80,15 +97,14 @@
            giveni={M\bibinitperiod},
            givenun=0}}%
       }
-      \list{location}{1}{%
-        {Jalpaiguri, India}%
-      }
       \strng{namehash}{5c903bbf24f7bf867b7aa0861965ddff}
       \strng{fullhash}{928aee65478451d56c5d1cdcae1ab024}
+      \strng{fullhashraw}{928aee65478451d56c5d1cdcae1ab024}
       \strng{bibnamehash}{928aee65478451d56c5d1cdcae1ab024}
       \strng{authorbibnamehash}{928aee65478451d56c5d1cdcae1ab024}
       \strng{authornamehash}{5c903bbf24f7bf867b7aa0861965ddff}
       \strng{authorfullhash}{928aee65478451d56c5d1cdcae1ab024}
+      \strng{authorfullhashraw}{928aee65478451d56c5d1cdcae1ab024}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
@@ -99,7 +115,7 @@
       \field{title}{{A Survey: Deepfake and Current Technologies for Solutions}}
       \field{year}{2024}
     \endentry
-    \entry{ciftci2020}{article}{}
+    \entry{ciftci2020}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=462c3bea97e7bbb8893d25d00a2254a9}{%
            family={Ciftci},
@@ -122,26 +138,51 @@
       }
       \strng{namehash}{67b6299ce7ee3f22a20aff6ebe2ef299}
       \strng{fullhash}{67b6299ce7ee3f22a20aff6ebe2ef299}
+      \strng{fullhashraw}{67b6299ce7ee3f22a20aff6ebe2ef299}
       \strng{bibnamehash}{67b6299ce7ee3f22a20aff6ebe2ef299}
       \strng{authorbibnamehash}{67b6299ce7ee3f22a20aff6ebe2ef299}
       \strng{authornamehash}{67b6299ce7ee3f22a20aff6ebe2ef299}
       \strng{authorfullhash}{67b6299ce7ee3f22a20aff6ebe2ef299}
+      \strng{authorfullhashraw}{67b6299ce7ee3f22a20aff6ebe2ef299}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{author}
-      \field{eprinttype}{arXiv}
       \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine Intelligence}
-      \field{month}{7}
       \field{title}{{FakeCatcher: Detection of Synthetic Portrait Videos using Biological Signals}}
       \field{year}{2020}
-      \verb{eprint}
-      \verb 1901.02212
-      \endverb
     \endentry
-    \entry{fernandes2025}{article}{}
+    \entry{croitoru2024}{misc}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5c0de0419c2a6c66a6a97da7ab48f9e8}{%
+           family={Croitoru},
+           familyi={C\bibinitperiod},
+           given={Florinel-Alin},
+           giveni={F\bibinithyphendelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{793c828c3a021269ecd5e2fa18603772}
+      \strng{fullhash}{793c828c3a021269ecd5e2fa18603772}
+      \strng{fullhashraw}{793c828c3a021269ecd5e2fa18603772}
+      \strng{bibnamehash}{793c828c3a021269ecd5e2fa18603772}
+      \strng{authorbibnamehash}{793c828c3a021269ecd5e2fa18603772}
+      \strng{authornamehash}{793c828c3a021269ecd5e2fa18603772}
+      \strng{authorfullhash}{793c828c3a021269ecd5e2fa18603772}
+      \strng{authorfullhashraw}{793c828c3a021269ecd5e2fa18603772}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Deepfake Media Generation and Detection in the Generative Al Era: A Survey and Outlook}}
+      \field{year}{2024}
+    \endentry
+    \entry{fernandes2025}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=d24bb2c32b2bad197ddd2c7888c09861}{%
            family={Fernandes},
@@ -158,10 +199,12 @@
       }
       \strng{namehash}{412988060b5cac92766e17108ea5920c}
       \strng{fullhash}{412988060b5cac92766e17108ea5920c}
+      \strng{fullhashraw}{412988060b5cac92766e17108ea5920c}
       \strng{bibnamehash}{412988060b5cac92766e17108ea5920c}
       \strng{authorbibnamehash}{412988060b5cac92766e17108ea5920c}
       \strng{authornamehash}{412988060b5cac92766e17108ea5920c}
       \strng{authorfullhash}{412988060b5cac92766e17108ea5920c}
+      \strng{authorfullhashraw}{412988060b5cac92766e17108ea5920c}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{extradatescope}{labelyear}
@@ -169,15 +212,72 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{author}
       \field{journaltitle}{JATI (Jurnal Mahasiswa Teknik Informatika)}
-      \field{month}{4}
-      \field{number}{2}
       \field{title}{{METODE DEEP LEARNING DALAM TEKNOLOGI DEEPFAKE: SYSTEMATIC LITERATURE REVIEW}}
-      \field{volume}{9}
       \field{year}{2025}
-      \field{pages}{3403\bibrangedash 3410}
-      \range{pages}{8}
     \endentry
-    \entry{graupner2025}{inproceedings}{}
+    \entry{gebru2021}{misc}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=f2b0ffb56c5d1e4220c16c0258e02eae}{%
+           family={Gebru},
+           familyi={G\bibinitperiod},
+           given={Timnit},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8be16479594021c7de7011fcb4b653d8}{%
+           family={Morgenstern},
+           familyi={M\bibinitperiod},
+           given={Jamie},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b4d0545d2d0fa73d74da9815d2246edc}{%
+           family={Vecchione},
+           familyi={V\bibinitperiod},
+           given={Briana},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bbf18ba84dac890ff76b935f2de7a6a1}{%
+           family={Vaughan},
+           familyi={V\bibinitperiod},
+           given={Jennifer\bibnamedelima Wortman},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db345367734bd532af652711d02f6234}{%
+           family={Wallach},
+           familyi={W\bibinitperiod},
+           given={Hanna},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c1a4c47805a40595e332f8460babbc7}{%
+           family={Daumé\bibnamedelima III},
+           familyi={D\bibinitperiod\bibinitdelim I\bibinitperiod},
+           given={Hal},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=04ddd15bdbd9d7c4572af614218b9b79}{%
+           family={Crawford},
+           familyi={C\bibinitperiod},
+           given={Kate},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4f04ecba63fae11cecefe95c590b14f6}
+      \strng{fullhash}{0e257169e3cb0e8d27a0cc27c70aa0fa}
+      \strng{fullhashraw}{0e257169e3cb0e8d27a0cc27c70aa0fa}
+      \strng{bibnamehash}{0e257169e3cb0e8d27a0cc27c70aa0fa}
+      \strng{authorbibnamehash}{0e257169e3cb0e8d27a0cc27c70aa0fa}
+      \strng{authornamehash}{4f04ecba63fae11cecefe95c590b14f6}
+      \strng{authorfullhash}{0e257169e3cb0e8d27a0cc27c70aa0fa}
+      \strng{authorfullhashraw}{0e257169e3cb0e8d27a0cc27c70aa0fa}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Datasheets for Datasets}}
+      \field{year}{2021}
+    \endentry
+    \entry{graupner2025}{inproceedings}{}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=4c999b2a1ff49206f2e336a467e1d000}{%
            family={Graupner},
@@ -210,15 +310,14 @@
            giveni={C\bibinitperiod},
            givenun=0}}%
       }
-      \list{publisher}{1}{%
-        {SCITEPRESS}%
-      }
       \strng{namehash}{afd470cdc18a8071f3ac07c7fa30d668}
       \strng{fullhash}{4ee1ad0a6aa317e47e567cb3d6fb5157}
+      \strng{fullhashraw}{4ee1ad0a6aa317e47e567cb3d6fb5157}
       \strng{bibnamehash}{4ee1ad0a6aa317e47e567cb3d6fb5157}
       \strng{authorbibnamehash}{4ee1ad0a6aa317e47e567cb3d6fb5157}
       \strng{authornamehash}{afd470cdc18a8071f3ac07c7fa30d668}
       \strng{authorfullhash}{4ee1ad0a6aa317e47e567cb3d6fb5157}
+      \strng{authorfullhashraw}{4ee1ad0a6aa317e47e567cb3d6fb5157}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
@@ -227,15 +326,41 @@
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 18th International Joint Conference on Biomedical Engineering Systems and Technologies (BIOSTEC 2025)}
       \field{title}{{Behavior-Based Deepfake Detection: Leveraging Cognitive Response to Visual Face Perception}}
-      \field{volume}{1}
       \field{year}{2025}
-      \field{pages}{964\bibrangedash 971}
-      \range{pages}{8}
-      \verb{doi}
-      \verb 10.5220/0013256200003911
-      \endverb
     \endentry
-    \entry{li2019}{inproceedings}{}
+    \entry{laudon2020}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2a3d8893ad04ba3c98081349c47e2f6c}{%
+           family={Laudon},
+           familyi={L\bibinitperiod},
+           given={Kenneth\bibnamedelima C.},
+           giveni={K\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7104f050b378ef23f0bc36c2b73e5ea2}{%
+           family={Laudon},
+           familyi={L\bibinitperiod},
+           given={Jane\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a99ce1573b42821945806f73f25db5a4}
+      \strng{fullhash}{a99ce1573b42821945806f73f25db5a4}
+      \strng{fullhashraw}{a99ce1573b42821945806f73f25db5a4}
+      \strng{bibnamehash}{a99ce1573b42821945806f73f25db5a4}
+      \strng{authorbibnamehash}{a99ce1573b42821945806f73f25db5a4}
+      \strng{authornamehash}{a99ce1573b42821945806f73f25db5a4}
+      \strng{authorfullhash}{a99ce1573b42821945806f73f25db5a4}
+      \strng{authorfullhashraw}{a99ce1573b42821945806f73f25db5a4}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Sistem Informasi Manajemen}}
+      \field{year}{2020}
+    \endentry
+    \entry{li2019}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=66d548e0e670e107fc4a80dc0c3825b3}{%
            family={Li},
@@ -250,15 +375,14 @@
            giveni={S\bibinitperiod},
            givenun=0}}%
       }
-      \list{location}{1}{%
-        {Long Beach, CA, USA}%
-      }
       \strng{namehash}{fcc50c96af822d4b144c6a8e4340c3bc}
       \strng{fullhash}{fcc50c96af822d4b144c6a8e4340c3bc}
+      \strng{fullhashraw}{fcc50c96af822d4b144c6a8e4340c3bc}
       \strng{bibnamehash}{fcc50c96af822d4b144c6a8e4340c3bc}
       \strng{authorbibnamehash}{fcc50c96af822d4b144c6a8e4340c3bc}
       \strng{authornamehash}{fcc50c96af822d4b144c6a8e4340c3bc}
       \strng{authorfullhash}{fcc50c96af822d4b144c6a8e4340c3bc}
+      \strng{authorfullhashraw}{fcc50c96af822d4b144c6a8e4340c3bc}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{extradatescope}{labelyear}
@@ -268,8 +392,216 @@
       \field{booktitle}{2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)}
       \field{title}{{Exposing DeepFake Videos By Detecting Face Warping Artifacts}}
       \field{year}{2019}
-      \field{pages}{86\bibrangedash 95}
-      \range{pages}{10}
+    \endentry
+    \entry{montibeller2025}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=bfbd135b2913f8d9f525e9270d6b3070}{%
+           family={Montibeller},
+           familyi={M\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a1554e287354a031d1906f664ba3ce79}{%
+           family={Shullani},
+           familyi={S\bibinitperiod},
+           given={Dasara},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8458c51e45c6069b62671d1aca6502e}{%
+           family={Baracchi},
+           familyi={B\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cc6e155969b6f40f3c2cf03331765418}{%
+           family={Piva},
+           familyi={P\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=600072f9a99f79ec87097e77320f93e6}{%
+           family={Boato},
+           familyi={B\bibinitperiod},
+           given={Giulia},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8060fdf02c1c5176d201aa5cce119189}
+      \strng{fullhash}{077f763e3c0e49ce6ec05abe77e10b13}
+      \strng{fullhashraw}{077f763e3c0e49ce6ec05abe77e10b13}
+      \strng{bibnamehash}{077f763e3c0e49ce6ec05abe77e10b13}
+      \strng{authorbibnamehash}{077f763e3c0e49ce6ec05abe77e10b13}
+      \strng{authornamehash}{8060fdf02c1c5176d201aa5cce119189}
+      \strng{authorfullhash}{077f763e3c0e49ce6ec05abe77e10b13}
+      \strng{authorfullhashraw}{077f763e3c0e49ce6ec05abe77e10b13}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 1st Deepfake Forensics Workshop: Detection, Attribution, Recognition, and Adversarial Challenges in the Era of Al-Generated Media (DFF '25)}
+      \field{title}{{Bridging the Gap: A Framework for Real-World Video Deepfake Detection via Social Network Compression Emulation}}
+      \field{year}{2025}
+    \endentry
+    \entry{orr2024}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=35f3bed534a0036728b4bb48e54b8698}{%
+           family={Orr},
+           familyi={O\bibinitperiod},
+           given={Will},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=04ddd15bdbd9d7c4572af614218b9b79}{%
+           family={Crawford},
+           familyi={C\bibinitperiod},
+           given={Kate},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{960fce347ae57e7a6adcdf2c404c20df}
+      \strng{fullhash}{960fce347ae57e7a6adcdf2c404c20df}
+      \strng{fullhashraw}{960fce347ae57e7a6adcdf2c404c20df}
+      \strng{bibnamehash}{960fce347ae57e7a6adcdf2c404c20df}
+      \strng{authorbibnamehash}{960fce347ae57e7a6adcdf2c404c20df}
+      \strng{authornamehash}{960fce347ae57e7a6adcdf2c404c20df}
+      \strng{authorfullhash}{960fce347ae57e7a6adcdf2c404c20df}
+      \strng{authorfullhashraw}{960fce347ae57e7a6adcdf2c404c20df}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Building Better Datasets: Seven Recommendations for Responsible Design from Dataset Creators}}
+      \field{year}{2024}
+    \endentry
+    \entry{pressman2019}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4d3f81788d99cf425c4b6e0a454baab0}{%
+           family={Pressman},
+           familyi={P\bibinitperiod},
+           given={Roger\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4d3f81788d99cf425c4b6e0a454baab0}
+      \strng{fullhash}{4d3f81788d99cf425c4b6e0a454baab0}
+      \strng{fullhashraw}{4d3f81788d99cf425c4b6e0a454baab0}
+      \strng{bibnamehash}{4d3f81788d99cf425c4b6e0a454baab0}
+      \strng{authorbibnamehash}{4d3f81788d99cf425c4b6e0a454baab0}
+      \strng{authornamehash}{4d3f81788d99cf425c4b6e0a454baab0}
+      \strng{authorfullhash}{4d3f81788d99cf425c4b6e0a454baab0}
+      \strng{authorfullhashraw}{4d3f81788d99cf425c4b6e0a454baab0}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Rekayasa Perangkat Lunak: Pendekatan Praktisi}}
+      \field{year}{2019}
+    \endentry
+    \entry{sohan2023}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=ab37dae577e47bde06c81c08d426bb4f}{%
+           family={Sohan},
+           familyi={S\bibinitperiod},
+           given={Md\bibnamedelima Fahim},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5e0084bd0971dfb9e49866d5c592e573}{%
+           family={Solaiman},
+           familyi={S\bibinitperiod},
+           given={Mohammad},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2f80e23a0a3b3483d90cef89cd6a7e8a}{%
+           family={Hasan},
+           familyi={H\bibinitperiod},
+           given={Md\bibnamedelima Anwarul},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e824bebfa333c088160e9bee5c6319d9}
+      \strng{fullhash}{e824bebfa333c088160e9bee5c6319d9}
+      \strng{fullhashraw}{e824bebfa333c088160e9bee5c6319d9}
+      \strng{bibnamehash}{e824bebfa333c088160e9bee5c6319d9}
+      \strng{authorbibnamehash}{e824bebfa333c088160e9bee5c6319d9}
+      \strng{authornamehash}{e824bebfa333c088160e9bee5c6319d9}
+      \strng{authorfullhash}{e824bebfa333c088160e9bee5c6319d9}
+      \strng{authorfullhashraw}{e824bebfa333c088160e9bee5c6319d9}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{Indonesian Journal of Electrical Engineering and Computer Science}
+      \field{title}{{A survey on deepfake video detection datasets}}
+      \field{year}{2023}
+    \endentry
+    \entry{zha2023}{misc}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=906b59d1cc2e5b314c20ab36e5c76442}{%
+           family={Zha},
+           familyi={Z\bibinitperiod},
+           given={Daochen},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1481029b15acf9adba3f3344c811e042}{%
+           family={Bhat},
+           familyi={B\bibinitperiod},
+           given={Zaid\bibnamedelima Pervaiz},
+           giveni={Z\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ef6a5e943d33b7faaae1a26edb54e594}{%
+           family={Lai},
+           familyi={L\bibinitperiod},
+           given={Kwei-Herng},
+           giveni={K\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bac6a7a5d8c835c2ebe5288a6fe722b4}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Fan},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=403a90aaa8642fa508ea9cd6ef3352c6}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Zhimeng},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=daa8bfdf77eb2f68057123822c5c620a}{%
+           family={Zhong},
+           familyi={Z\bibinitperiod},
+           given={Shaochen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=13be76d254e7c2f65cfc92bc75bb18fd}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Xia},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4931d1e4ac9117c6cf7291aa40b28816}
+      \strng{fullhash}{7203d0a9315ea4f4469dc8595ae1f795}
+      \strng{fullhashraw}{7203d0a9315ea4f4469dc8595ae1f795}
+      \strng{bibnamehash}{7203d0a9315ea4f4469dc8595ae1f795}
+      \strng{authorbibnamehash}{7203d0a9315ea4f4469dc8595ae1f795}
+      \strng{authornamehash}{4931d1e4ac9117c6cf7291aa40b28816}
+      \strng{authorfullhash}{7203d0a9315ea4f4469dc8595ae1f795}
+      \strng{authorfullhashraw}{7203d0a9315ea4f4469dc8595ae1f795}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Data-centric Artificial Intelligence: A Survey}}
+      \field{year}{2023}
     \endentry
   \enddatalist
 \endrefsection

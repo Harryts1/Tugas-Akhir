@@ -1,0 +1,61 @@
+% ==========================================
+% BAB I PENDAHULUAN
+% ==========================================
+\chapter{PENDAHULUAN}
+\label{chap:pendahuluan}
+% --- Latar Belakang ---
+\section{Latar Belakang}
+Perkembangan teknologi \textit{Artificial Intelligence} menimbulkan cara baru untuk menciptakan berita hoaks melalui \textit{deepfake}. \textit{Deepfake} adalah teknik untuk menempatkan gambar wajah orang ``sebenarnya'' dalam suatu video menjadi wajah target sehingga seolah -- olah target tersebut melakukan atau mengatakan hal-hal yang dilakukan orang ``sebenarnya''. Menurut laporan dari Sensity AI, terjadi lonjakan kasus \textit{deepfake} sebesar 550\% sejak tahun 2019, didapatkan bahwa 90\% di antaranya digunakan untuk menyebarkan disinformasi, melakukan penipuan, pencemaran nama baik, hingga pelecehan yang menargetkan kelompok rentan seperti perempuan dan anak-anak. Di Indonesia sendiri, \textit{deepfake} sering kali digunakan untuk memprovokasi sentimen negatif dari publik. Fenomena ini menunjukkan urgensi dari pengembangan teknologi untuk dapat mendeteksi \textit{deepfake} secara efektif.
+
+Salah satu tantangan dalam pendeteksian \textit{deepfake} adalah ketika suatu video \textit{deepfake} muncul, video tersebut akan diunggah dan disebarkan melalui berbagai platform media sosial. Proses kompresi yang dilakukan pada media sosial seperti \textit{Youtube}, \textit{Tiktok}, \textit{WhatsApp}, dan lain sebagainya akan menyebabkan kualitas video tersebut menurun. Kualitas video \textit{deepfake} yang rendah akan semakin sulit untuk dideteksi, baik oleh manusia maupun oleh teknologi \textit{AI}. Akibatnya, banyak model deteksi yang menunjukkan akurasi tinggi di lingkungan laboratorium (mencapai hampir 100\%) mengalami penurunan kinerja drastis hingga hanya sekitar 65\% saat dihadapkan pada skenario dunia nyata dengan video terkompresi \autocite[1]{alrashoud2025}.
+
+Untuk mengatasi hal tersebut, berbagai pendekatan deteksi dikembangkan oleh para peneliti. Beberapa solusi berfokus pada analisis artefak spasial dan tekstur yang tidak wajar pada wajah dengan metode deteksi \textit{Convolutional Neural Networks} (CNNs) \autocite[1, 2]{li2019}. Solusi lain menganalisis inkonsistensi temporal antar \textit{frame} video, seperti pola kedipan mata atau gerakan kepala yang tidak natural dengan menggunakan \textit{Recurrent Neural Networks} (RNNs) \autocites[1]{fernandes2025}[9]{alrashoud2025}. Selain itu, ada metode yang lebih maju untuk mendeteksi sinyal biologis (misalnya, detak jantung melalui metode \textit{remote Photoplethysmography} atau rPPG) yang gagal direplikasi oleh generator \textit{deepfake} \autocite[1, 7]{ciftci2020}. Pendekatan multimodal yang menganalisis sinkronisasi antara gerakan bibir (visual) dan ucapan (audio) juga menunjukkan hasil yang menjanjikan karena generator \textit{deepfake} sering kali kesulitan menjaga kolerasi temporal antara kedua modalitas tersebut \autocite[1]{alrashoud2025}.
+
+Meskipun begitu, terdapat beberapa kesenjangan penelitian yang harus diperhatikan. Pertama, mayoritas model deteksi yang ada belum teruji secara komprehensif dengan video yang berkualitas rendah yang umumnya tersebar pada media sosial. Kedua, sebagian besar \textit{dataset} yang digunakan untuk melatih model berasal dari luar negeri, sehingga masih dipertanyakan validitasnya untuk mendeteksi \textit{deepfake} untuk konten \textit{deepfake} yang tersebar di Indonesia \autocites[5]{banerjee2024}[7]{graupner2025}. Oleh karena itu, penelitian ini diusulkan untuk mengembangkan sebuah solusi yang berfokus pada deteksi \textit{deepfake} pada video berkualitas rendah akibat kompresi, serta divalidasi dengan konten yang relevan dengan konteks Indonesia. Kebutuhan akan solusi yang andal dan efisien inilah yang menjadi motivasi utama dibalik pemilihan topik tugas akhir ini.
+
+% --- Rumusan Masalah ---
+\section{Rumusan Masalah}
+Masalah utama yang ingin diselesaikan dalam tugas akhir ini adalah belum adanya model deteksi \textit{deepfake} yang andal dan teruji untuk menangani video berkualitas rendah dalam konteks Indonesia. Mayoritas solusi yang ada saat ini dilatih menggunakan \textit{dataset} video resolusi tinggi dengan subjek non-Indonesia, sehingga performanya menurun drastis saat dihadapkan pada video terkompresi dan gagal mengenali karakteristik demografis lokal. Jika tidak diatasi, masyarakat akan semakin rentan terhadap ancaman disinformasi dan penipuan berbasis \textit{deepfake}.Dalam menjawab permasalahan tersebut, penelitian ini akan berfokus pada pembuatan dataset yang representatif dan pengembangan model deteksi yang robust. Berikut adalah beberapa rumusan masalah spesifik yang akan diselesaikan
+\begin{enumerate}
+\item	Bagaimana metodologi yang efektif untuk mengumpulkan dan menyeleksi video asli yang beragam dari sumber lokal Indonesia sebagai bahan dasar untuk pembuatan \textit{dataset}?
+\item	Teknik pembuatan \textit(deepfake) apa saja yang perlu diterapkan pada video asli untuk menghasilkan data manipulasi yang relevan dengan ancaman saat ini, dan bagaimana proses penerapannya?
+\item Bagaimana cara mensimulasikan efek kompresi media sosial secara sistematis untuk menghasilkan video berkualitas rendah yang realistis dan terukur dalam \textit{dataset}?
+\end{enumerate}
+
+% --- Tujuan ---
+\section{Tujuan}
+Tugas akhir ini bertujuan untuk mengembangkan dataset untuk dapat mendeteksi video deepfake di Indonesia dengan metode pembuatan deepfake serta pengumpulan video deepfake yang beredar di sosial media.
+
+% --- Batasan Masalah ---
+\section{Batasan Masalah}
+Berikut merupakan beberapa batasan yang ditetapkan untuk memfokuskan ruang lingkup dan memastikan hasil dari tugas akhir ini relevan dengan tujuan yang ditetapkan.
+\begin{enumerate}
+  \item Tugas akhir ini dikerjakan secara berkelompok yang terdiri dari 3 orang mahasiswa, yaitu Alvin Fadhilah Akmal (NIM 18222079), Harry Truman Suhalim (NIM 18222081), dan Steven Adrian Corne (NIM 18222101). Adapun pembagian fokus dari ketiga mahasiswa tersebut ialah Alvin fokus pada antarmuka, Harry fokus pada \textit{dataset} \textit{deepfake}, dan Steven fokus pada model untuk mendeteksi \textit{deepfake}.
+  \item Penelitian akan menggunakan \textit{dataset} video yang dirancang untuk merepresentasikan konteks Indonesia. Ini mencakup pengumpulan video asli yang menampilkan wajah orang Indonesia dan pembuatan video deepfake dari bahan tersebut.
+\end{enumerate}
+
+% --- Metodologi Pengerjaan TA ---
+\section{Metodologi}
+Tahapan yang akan dilalui selama pelaksanaan tugas akhir ini terdiri dari tiga bagian, yaitu:
+\begin{enumerate}
+  \item Perumusan masalah awal \\
+  Pada tahapan ini, dilakukan identifikasi masalah awal dengan cara \textit{brainstorming} bersama dengan seluruh anggota kelompok tugas akhir untuk menentukan masalah yang akan diangkat menjadi topik tugas akhir. Bermula dari pengamatan salah seorang anggota kelompok, terkait sulit membedakan berita mana yang hoax dan berita mana yang asli. Seluruh anggota kelompok mengalami hal yang sama, dikarenakan berita hoax terlalu luas maka kami menyepakati untuk mendeteksi hoax berupa \textit{deepfake}. 
+  Untuk mempelajari tentang \textit{deepfake} terutama dalam konteks hoax kami melakukan riset lebih lanjut. Akhirnya ditemukan data dan fakta bahwa \textit{deepfake} saat ini sering kali digunakan untuk menyebarkan hoax dan ditemukan juga beberapa jurnal yang membahas \textit{deepfake}. Data dan informasi yang didapat dari jurnal tersebut akhirnya memperkuat masalah yang ingin kami selesaikan dikarenakan dalam beberapa jurnal disebutkan bahwa model deteksi \textit{deepfake} yang mereka miliki belum dapat mendeteksi video dengan kualitas rendah dan juga model kurang relevan digunakan apabila konteks \textit{deepfake} di Indonesia.
+  \item Pencarian dan Penulisan Studi Literatur \\
+  Penentuan teori-teori yang dirasa perlu dalam penulisan tugas akhir ini dilakukan dengan mengidentifikasikan hal-hal seputar fokus yang dibahas oleh setiap anggota kelompok tugas akhir. Tugas akhir ini fokus pada dataset sehingga teori-teori yang dibutuhkan adalah teori seputar metodologi pembuatan \textit{dataset deepfake} publik, teknik generasi \textit{deepfake}, serta dampak dan simulasi dari kompresi video. 
+  Metodologi pembuatan \textit{dataset} sendiri dipilih dengan tujuan untuk menyamakan \textit{dataset} dengan konten lokal yang ada di Indonesia sehingga lebih relevan. Selain itu, dapat juga disesuaikan kualitas dari video untuk menyesuaikan dengan kondisi video disebar luaskan di sosial media.
+  Adapun penelusuran pustaka lebih dalam terkait setiap teori yang diperlukan dilakukan melalui internet. Untuk setiap teori, dilakukan pencarian terhadap jurnal-jurnal yang membahas spesifik terkait teori tersebut. Kata kunci pencarian yang digunakan antara lain \textit{"deepfake dataset creation", "face forensics", "video compression simulation", dan "generative adversarial networks for face synthesis"}. Untuk setiap area, proses dimulai dengan mencari survey paper guna mendapatkan gambaran umum, lalu dilanjutkan dengan penelusuran mendalam terhadap artikel-artikel kunci yang relevan untuk dipelajari metodologinya secara detail.
+  \item Pengembangan \textit{Dataset} \\
+  Pengembangan \textit{dataset} dibuat secara manual dengan membuat deepfake sendiri maupun mengambil deepfake yang ada di sosial media. Metodologi dalam pengembangan dataset dibagi menjadi empat fase yaitu:
+  \begin{enumerate}[label=\alph*.]
+    \item Fase Pengumpulan (\textit{Collection}) \\
+    Pada fase ini, dilakukan pengumpulan bahan mentah untuk \textit{dataset}. Fokus utama adalah mendapatkan data video asli yang merepresentasikan konten lokal Indonesia. Kebutuhan awal, seperti jumlah video, durasi, dan variasi subjek, ditetapkan untuk memastikan \textit{dataset} yang dihasilkan cukup beragam. Video terkait tokoh publik, \textit{vlogger}, dan individu lainnya pada sosial media diunduh dengan kualitas tinggi, video \textit{deepfake} yang tersebar pada sosial media juga dikumpulkan.
+    \item Fase Generasi dan Pemrosesan (\textit{Construction})
+    Setelah bahan mentah terkumpul, dilakukan proses pembuatan data \textit{deepfake}.  Fase ini diawali dengan penggunaan video asli untuk menghasilkan video manipulasi menggunakan beberapa teknik, seperti \textit{face swapping} dan \textit{lip-sync}, dengan perangkat lunak open-source untuk menciptakan variasi artefak.
+    Setelah itu, dilakukan simulasi kompresi menggunakan \textit{tools} seperti FFmpeg untuk menurunkan kualitas video secara terkontrol, sehingga menghasilkan versi berkualitas rendah yang realistis.
+    \item Fase Pelabelan (\textit{Labeling}) \\
+    Pada fase ini, setiap data yang telah diproses akan diberi label informatif untuk memberikan konteks bagi model \textit{machine learning}. Setiap video akan diklasifikasikan dengan label utama (asli atau palsu). Selanjutnya, sebuah file metadata akan dibuat untuk mencatat informasi yang lebih detail untuk setiap data, seperti ID video, label utama, jenis manipulasi yang digunakan (jika palsu), dan tingkat kompresi yang diterapkan.
+    \item Fase Validasi (\textit{Transition}) \\
+    Setelah pelabelan selesai, \textit{dataset} divalidasi untuk memastikan kualitas dan integritasnya. Dilakukan pemeriksaan silang secara acak terhadap sampel data untuk memastikan pelabelan sudah akurat. Selain itu, diperiksa keseimbangan antara kelas asli dan palsu serta antara data berkualitas tinggi dan rendah. Tujuannya adalah digunakan untuk melakukan perbaikan minor pada \textit{dataset} sebelum digunakan untuk pelatihan model.
+  \end{enumerate}
+\end{enumerate}

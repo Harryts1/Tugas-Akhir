@@ -3,7 +3,47 @@
 % ==========================================
 \chapter{DESAIN KONSEP SOLUSI}
 \label{chap:desain-konsep-solusi}
-Ilustrasikan desain konsep solusi dalam bentuk model konseptual dan penjelasan secara ringkas, 
-beserta perbedaannya dengan sistem saat ini. Ilustrasi harus dapat dibandingkan (\textit{before} and \textit{after}). 
-Karena masih berupa proposal, bab ini hanya berisi gambar desain konsep solusi tersebut dan 
-penjelasan perbandingannya dengan gambar sistem yang ada saat ini (yang tergambar di awal Bab \ref{chap:analisis-masalah}).
+Pada bab ini akan dijelaskan terkait konsep solusi yang ditawarkan untuk menjawab masalah yang telah dijabarkan pada bab sebelumnya.
+
+\section{Desain Konsep Solusi}
+Pada bagian ini difokuskan untuk pengembangan terkait model konseptual yang dapat menjembatani antara \textit{deepfake} yang beredar di Indonesia dengan solusi berupa \textit{dataset} lokal yang membantu untuk mendeteksi \textit{deepfake} tersebut. Gambar \ref{gambar:IV-1} menggambarkan model konseptual solusi yang diusulkan, kesenjangan tersebut diatasi oleh komponen-komponen yang akan dibangun dalam penelitian ini.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{image/GambarIV.png}
+    \caption{Model Konseptual Solusi yang Diusulkan}
+    \label{gambar:IV-1}
+\end{figure}
+
+Alur kerja dari model konseptual solusi yang diusulkan diawali dengan fase pengembangan. Berbeda dengan pendekatan sebelumnya yang bergantung pada dataset publik asing, proses ini dimulai dengan pengumpulan video asli Indonesia secara mandiri. Video-video tersebut kemudian melalui tahap pemrosesan dan simulasi kompresi, serta dilanjutkan dengan proses pelabelan dan validasi.
+
+Hasil dari fase pengembangan ini adalah sebuah \textit{dataset} konteks Indonesia yang memiliki karakteristik kualitas yang beragam (tinggi dan rendah) serta memuat representasi wajah orang Indonesia. \textit{Dataset} inilah yang kemudian menjadi masukan utama dalam fase pelatihan untuk melatih model deteksi.
+
+Luaran dari proses pelatihan tersebut adalah sebuah model \textit{robust}, yang tidak hanya mengenali manipulasi wajah tetapi juga adaptif terhadap kualitas video yang rendah. Akhirnya, pada fase pengujian saat model dihadapkan pada skenario dunia nyata yaitu Video di media sosial Indonesia, model mampu melakukan generalisasi dengan baik sehingga menghasilkan deteksi efektif.
+
+Model konseptual solusi yang diusulkan memperkenalkan satu baru di awal alur kerja yaitu fase pengembangan, pada fase ini dilakukan pengembangan \textit{dataset} dengan konteks Indonesia yang berisi video-video dengan wajah orang Indonesia yang dilengkapi dengan berbagai kualitas. Berikut ini adalah tabel yang akan membandingkan fase-fase yang ada di kondisi saat ini dengan kondisi yang ada pada solusi yang diusulkan.
+
+\begin{table}[H]
+    \centering
+    \caption{Perbandingan Solusi dengan Kondisi Saat Ini}
+    \label{tab:perbandingan_solusi}
+    
+    % Mengatur jarak vertikal antar baris agar lebih rapi (menggantikan \rule manual)
+    \renewcommand{\arraystretch}{1.2} 
+    
+    % Resizebox untuk memastikan tabel pas dengan lebar margin
+    \resizebox{\textwidth}{!}{%
+        % Saya sedikit memperlebar kolom p{...} agar teks tidak terlalu banyak terpotong ke bawah
+        \begin{tabular}{|c|p{6.5cm}|p{6.5cm}|}
+            \hline
+            \textbf{Fase} & \textbf{Kondisi Saat Ini} & \textbf{Kondisi Solusi} \\ 
+            \hline
+            Pengembangan & \textit{Dataset} Publik (kurang relevan dengan konteks demografis Indonesia) & \textit{Dataset} Indonesia (wajah orang Indonesia dan kualitas menyesuaikan) \\ 
+            \hline
+            Pelatihan & Dilatih dengan \textit{dataset} berkualitas tinggi & Dilatih dengan \textit{dataset} dengan berbagai kualitas \\ 
+            \hline
+            Pengujian & Kurang relevan dengan kondisi nyata di Indonesia & Lebih relevan dengan kondisi nyata di Indonesia \\ 
+            \hline
+        \end{tabular}%
+    }
+\end{table}
+Tabel \ref{tab:perbandingan_solusi} merangkum pergeseran pendekatan yang ditawarkan penelitian ini dibandingkan kondisi eksisting dalam tiga fase utama, yaitu pengembangan, pelatihan, dan pengujian. Pada fase pengembangan, kondisi saat ini sangat bergantung pada \textit{dataset} publik global yang dinilai kurang relevan dengan karakteristik demografis Indonesia, sehingga solusi yang diusulkan adalah membangun \textit{dataset} baru yang secara spesifik memuat wajah orang Indonesia dengan kualitas yang disesuaikan. Implikasinya berlanjut ke fase pelatihan, di mana model tidak lagi hanya dilatih menggunakan data berkualitas tinggi, melainkan dipapar dengan variasi kualitas video untuk meningkatkan ketangguhan model. Akhirnya, pada fase pengujian, pendekatan ini memastikan hasil evaluasi yang jauh lebih relevan dengan skenario nyata di media sosial Indonesia dibandingkan metode terdahulu yang sering kali gagal merepresentasikan kondisi lapangan.

@@ -10,12 +10,12 @@ Keberhasilan dalam AI tentu bergantung pada kualitas data yang dimiliki, dalam k
 \begin{figure}[h!] % pilihan opsi yang disarankan: t = top, b = bottom, h = here
 	\centering
   \captionsetup{justification=centering}
-    	\includegraphics[width=0.7\textwidth]{image/DataCentric.png}
-	\caption{Pilar Utama \textit{Data-Centric AI}}
+    	\includegraphics[width=1\textwidth]{image/DataCentric.png}
+	\caption{Pilar Utama \textit{Data-Centric AI} \autocite{zha2023}}
 	\label{gambar:Pilar-Utama}
 \end{figure}
 
-Berdasarkan gambar \ref{gambar:Pilar-Utama}, terdapat tiga pilar utama dari \textit{data-centric AI}. Pada penelitian ini, terdapat dua pilar utama dari \textit{ data-centric AI} yang difokuskan yaitu Pengembangan Data Pelatihan (\textit{Training Data Development}) dan Pengembangan Data Inferensi (\textit{Inference Data Development}). 
+Berdasarkan Gambar \ref{gambar:Pilar-Utama}, terdapat tiga pilar utama dari \textit{data-centric AI}. Pada penelitian ini, terdapat dua pilar utama dari \textit{ data-centric AI} yang difokuskan yaitu Pengembangan Data Pelatihan (\textit{Training Data Development}) dan Pengembangan Data Inferensi (\textit{Inference Data Development}). 
 Tahapan dalam Pengembangan Data Pelatihan (\textit{Training Data Development}) terdiri dari : 
 
 \begin{enumerate}
@@ -41,8 +41,49 @@ Sedangkan, tahapan dari Pengembangan Data Inferensi (\textit{Inference Data Deve
 Ini didefinisikan sebagai proses mempartisi membagi \textit{dataset} menjadi sub-populasi yang relevan dan mengevaluasi kinerja model pada setiap sub-populasi tersebut secara terpisah \autocite{zha2023}. 
 \end{enumerate}
 
+\section{Pendekatan-Pendekatan dalam Pengembangan \textit{Dataset}}
+Dalam pengembangan \textit{dataset}, terdapat berbagai pendekatan metodologis yang dapat diterapkan sesuai dengan karakteristik masalah dan ketersediaan sumber daya. Pemilihan pendekatan yang tepat sangat krusial karena akan menentukan kualitas, skala, dan efisiensi biaya dari \textit{dataset} yang dihasilkan. Berikut ini adalah uraian mengenai beberapa pendekatan utama tersebut.
+
+\subsection{Pendekatan \textit{Crowdsourcing}}
+Pendekatan \textit{Crowdsourcing} merupakan solusi efektif ketika menghadapi skenario ketiadaan data pelatihan yang masif atau tugas pelabelan yang terlalu kompleks bagi satu individu. Pendekatan ini berfokus pada dekomposisi tugas besar menjadi tugas-tugas mikro yang sederhana agar dapat dikerjakan oleh pekerja non-ahli dalam jumlah banyak. Contoh penerapan metode ini terlihat pada proyek 'In Codice Ratio' \autocite{firmani2020} yang melibatkan siswa sekolah untuk mentranskripsi manuskrip kuno Vatikan.
+
+Secara metodologis, pendekatan ini dimulai dengan identifikasi masalah untuk memetakan batasan pekerja non-ahli. Selanjutnya, dilakukan pemrosesan awal otomatis oleh sistem untuk memecah data menjadi segmen kecil. Kunci utamanya adalah dekomposisi tugas, di mana pekerja tidak diminta melakukan analisis kompleks, melainkan hanya pencocokan pola sederhana. Untuk menjamin kualitas data, metode ini menerapkan sistem redundansi, di mana satu label baru dianggap valid jika disetujui oleh mayoritas pekerja.
+
+Kelebihan utama dari pendekatan \textit{crowdsourcing} adalah kemampuannya untuk menyelesaikan tugas pembuatan \textit{dataset} berskala besar yang sebelumnya dianggap mustahil karena kendala biaya atau waktu, serta menghasilkan data yang sangat granular. Namun, pendekatan ini memiliki kelemahan pada ketergantungannya yang tinggi terhadap kualitas pra-pemrosesan otomatis. Jika segmentasi awal gagal, pekerja tidak dapat memberikan label yang benar. Selain itu, pendekatan ini seringkali menuntut pengembangan infrastruktur atau \textit{platform} khusus untuk mengelola volume tugas mikro yang sangat besar.
+
+Metode inti dari pendekatan \textit{crowdsourcing} meliputi:
+\begin{enumerate}
+  \item Identifikasi Masalah \\
+  Peneliti mengakui bahwa pekerja non-ahli tidak mampu mentranskripsi seluruh kata atau kalimat dari manuskrip kuno karena tulisannya sulit dibaca dan penuh singkatan.
+  \item Pemrosesan Awal Otomatis \\
+  Sistem secara otomatis memproses gambar manuskrip untuk mengidentifikasi baris dan kata. Setiap gambar kata kemudian \textit{di-over-segmentasi} menjadi segmen-segmen yang lebih kecil dari satu karakter.
+  \item Dekomposisi Tugas \\
+  Alih-alih meminta pekerja untuk "mentranskripsi", sistem memberi mereka tugas \textit{micro-task} yang jauh lebih sederhana yang menyerupai \textit{pattern matching}.
+  \item \textit{Micro-Task} \\
+  Pekerja disajikan gambar kata yang sudah terpotong-potong (setiap segmen diberi warna berbeda) dan sebuah simbol target (misalnya, ‘a’). Tugasnya adalah “Tandai segmen-segmen yang membentuk simbol ‘a’”.
+  \item Kontrol Kualitas \\
+  Untuk mengatasi kesalahan dari pekerja non-ahli, pendekatan ini sangat bergantung pada redundansi. Tugas yang sama diberikan kepada beberapa pekerja yang berbeda. Sebuah label baru diterima hanya jika telah mencapai ambang batas suara positif (misalnya, 3 suara).
+\end{enumerate}
+
+\subsection{\textit{Human-Centric Approach}}
+Berbeda dengan \textit{crowdsourcing} yang menyederhanakan tugas, pendekatan \textit{Human-Centric} adalah metodologi konstruksi \textit{dataset} yang dirancang khusus untuk menangani tugas anotasi yang kompleks secara semantik, seperti penentuan keandalan konten berita. Sebagaimana diusulkan oleh \autocite{bonetjover2023}, pendekatan ini tidak bergantung pada satu teknik saja, melainkan menggabungkan beberapa strategi dalam sebuah \textit{pipeline} bertahap yang bertujuan memaksimalkan efisiensi anotasi. Metodologi ini membagi proses pengembangan menjadi tiga fase yang secara progresif meningkatkan keterlibatan otomatisasi mesin untuk membantu anotator manusia.
+
+Proses dimulai dengan fase Anotasi Manual Penuh (Inisialisasi), di mana sejumlah kecil data dikumpulkan dan dianotasi sepenuhnya dari awal oleh manusia guna menciptakan seed dataset berkualitas tinggi untuk melatih model awal. Setelah model terbentuk, proses berlanjut ke fase Kompilasi Otomatis, di mana model menganalisis kumpulan data besar dan secara cerdas memilih dokumen yang paling informatif untuk dianotasi, sehingga menghemat waktu kurasi data. Tahap yang paling efisien adalah fase ketiga, yaitu Kompilasi dan Anotasi Semi-Otomatis (Pra-pelabelan). Pada tahap ini, sistem memberikan pra-anotasi otomatis pada data baru, sehingga peran manusia bergeser drastis dari melakukan anotasi manual menjadi sekadar memverifikasi, mengoreksi, dan melengkapi hasil kerja mesin.
+
+Penerapan pendekatan ini terbukti memberikan dampak signifikan terhadap efisiensi dan kualitas data. Studi kasus menunjukkan adanya pengurangan waktu anotasi hingga hampir 64\% dibandingkan metode manual penuh, serta peningkatan konsistensi antar-anotator karena adanya basis pra-anotasi yang seragam. Meskipun demikian, pendekatan ini memiliki tantangan tersendiri, seperti kebutuhan infrastruktur teknis yang kompleks untuk melatih model secara iteratif dan risiko munculnya bias model. Risiko bias terjadi ketika model hanya menyarankan data yang sesuai dengan pola yang sudah dipelajarinya, yang berpotensi mengurangi keragaman dataset jika tidak diawasi dengan cermat.
+
+Berikut ini adalah tiga fase utama dari pendekatan \textit{Human-Centric}:
+\begin{enumerate}
+  \item Anotasi Manual Penuh (Inisialisasi) \\
+  Sejumlah kecil data awal dikumpulkan dan dianotasi sepenuhnya secara manual dari awal. Ini adalah proses yang lambat dan melelahkan, tetapi penting untuk menciptakan \textit{seed dataset} berkualitas tinggi untuk melatih model awal.
+  \item Kompilasi Otomatis \\
+  Model ini dilatih kemudian menganalisis kumpulan data besar yang belum berlabel dan secara otomatis memilihkan dokumen yang paling informatif untuk dianotasi oleh manusia. Ini menghemat waktu kompilasi, tetapi anotasi masih dilakukan secara manual.
+  \item Kompilasi dan Anotasi Semi-Otomatis (Pra-pelabelan) \\
+  Ini adalah fase yang paling efisien. Sistem tidak hanya memilihkan dokumen baru, tetapi juga secara otomatis memberikan pra-anotasi pada dokumen tersebut menggunakan model yang dilatih dari semua data sebelumnya. Tugas manusia kemudian beralih dari "menganotasi dari nol" menjadi "memeriksa, mengoreksi, dan melengkapi" hasil pra-anotasi dari mesin.
+\end{enumerate}
+
 \section{Metodologi Pengembangan \textit{Dataset}}
-Pengembangan dataset dalam \textit{machine learning} modern semakin diakui sebagai proses yang krusial dan kompleks, yang membutuhkan metodologi terstruktur untuk memastikan transparansi, akuntabilitas, dan tanggung jawab etis. Mengambil analogi dari lembar data di industri elektronik yang merinci karakteristik komponen, \autocite{gebru2021} mengusulkan agar setiap dataset disertai dengan lembar data serupa. Tujuan utamanya adalah untuk meningkatkan transparansi dan akuntabilitas dalam komunitas \textit{machine learning}. Metodologi ini dirancang untuk melayani dua pemangku kepentingan utama: pembuat dataset dan konsumen \textit{dataset}. Bagi pembuat, proses ini mendorong refleksi yang cermat terhadap asumsi, potensi risiko, dan implikasi penggunaan \textit{dataset}; proses refleksi ini sengaja dirancang untuk tidak otomatis. Bagi konsumen, lembar data menyediakan informasi yang diperlukan untuk membuat keputusan yang tepat tentang penggunaan \textit{dataset} dan menghindari penyalahgunaan \autocite{gebru2021}.
+Pengembangan \textit{dataset} dalam \textit{machine learning} modern semakin diakui sebagai proses yang krusial dan kompleks, yang membutuhkan metodologi terstruktur untuk memastikan transparansi, akuntabilitas, dan tanggung jawab etis. Mengambil analogi dari lembar data di industri elektronik yang merinci karakteristik komponen, \autocite{gebru2021} mengusulkan agar setiap dataset disertai dengan lembar data serupa. Tujuan utamanya adalah untuk meningkatkan transparansi dan akuntabilitas dalam komunitas \textit{machine learning}. Metodologi ini dirancang untuk melayani dua pemangku kepentingan utama: pembuat dataset dan konsumen \textit{dataset}. Bagi pembuat, proses ini mendorong refleksi yang cermat terhadap asumsi, potensi risiko, dan implikasi penggunaan \textit{dataset}; proses refleksi ini sengaja dirancang untuk tidak otomatis. Bagi konsumen, lembar data menyediakan informasi yang diperlukan untuk membuat keputusan yang tepat tentang penggunaan \textit{dataset} dan menghindari penyalahgunaan \autocite{gebru2021}.
 
 Melengkapi kerangka kerja dokumentasi tersebut, \autocite{orr2024} mengeksplorasi praktik dan proses penciptaan \textit{dataset} yang bertanggung jawab dari perspektif pembuatnya. Melalui wawancara mendalam dengan 18 pembuat \textit{dataset} terkemuka, mereka mengidentifikasi bahwa pekerjaan \textit{dataset} seringkali terfragmentasi, kurang dihargai, dan para pembuatnya sering belajar dari kesalahan secara terisolasi \autocite{orr2024}. Studi ini menyajikan tujuh rekomendasi metodologis utama yang berasal dari pengalaman praktis para pembuat \textit{dataset}, yang memberikan panduan tentang bagaimana melaksanakan siklus hidup yang diidentifikasi oleh \autocite{gebru2021}.
 
@@ -73,19 +114,58 @@ Studi Orr dan Crawford menyajikan tujuh rekomendasi metodologis utama yang beras
 \end{enumerate}
 
 \section{Kelompok Suku Bangsa Indonesia}
+Indonesia merupakan negara kepulauan dengan keragaman etnis yang luar biasa. Berdasarkan data Sensus Penduduk tahun 2010 yang dirilis oleh Badan Pusat Statistik, komposisi penduduk Indonesia terdiri dari ribuan suku bangsa yang tersebar di berbagai pulau besar. Untuk memberikan gambaran kuantitatif mengenai persebaran ini, data demografi suku bangsa utama dapat dilihat pada Tabel berikut ini.
 
-% --- PINDAHKAN BLOK FIGURE INI KE ATAS ---
-\begin{figure}[H] % pilihan opsi [h!] meminta LaTeX menempatkannya "di sini"
-	\centering
-  \captionsetup{justification=centering}
-    	\includegraphics[width=0.7\textwidth]{image/Suku.png}
-	\caption{Gambar Jumlah Penduduk Berdasarkan Kelompok Suku Bangsa Pada Sensus Penduduk 2010}
-	\label{gambar:Suku-Bangsa}
-\end{figure}
-% --- AKHIR DARI BLOK FIGURE YANG DIPINDAHKAN ---
+
+\begin{table}[H]
+\centering
+\caption{Komposisi Penduduk Indonesia Berdasarkan Suku Bangsa \autocite{bps2012}}
+\label{tab:sensus}
+\renewcommand{\arraystretch}{0.6} % Sedikit dilonggarkan agar tulisan tidak terlalu dempet saat di-resize
+% --- Mulai Perbaikan: Resizebox ---
+\resizebox{\textwidth}{!}{%
+    \begin{tabular}{|l|r|r|r|}
+        \hline
+        Kelompok Suku Bangsa & Jumlah Penduduk & Persentase dari Total Penduduk (\%) & Ranking \\
+        \hline
+        Suku asal Aceh & 4.091.451 & 1,73 & 14 \\
+        Batak & 8.466.969 & 3,58 & 3 \\
+        Nias & 1.041.925 & 0,44 & 30 \\
+        Melayu & 5.365.399 & 2,27 & 10 \\
+        Minangkabau & 6.462.713 & 2,73 & 7 \\
+        Suku asal Jambi & 1.415.547 & 0,60 & 25 \\
+        Suku asal Sumatera Selatan & 5.119.581 & 2,16 & 10 \\
+        Suku asal Lampung & 1.381.660 & 0,58 & 26 \\
+        Suku asal Sumatera Lainnya & 2.204.472 & 0,93 & 21 \\
+        Betawi & 6.807.968 & 2,88 & 6 \\
+        Suku asal Banten & 4.657.784 & 1,97 & 11 \\
+        Sunda & 36.701.670 & 15,50 & 2 \\
+        Jawa & 95.217.022 & 40,22 & 1 \\
+        Cirebon & 1.877.514 & 0,79 & 24 \\
+        Madura & 7.179.356 & 3,03 & 5 \\
+        Bali & 3.946.416 & 1,67 & 15 \\
+        Sasak & 3.173.127 & 1,34 & 16 \\
+        Suku Nusa Tenggara Barat lainnya & 1.280.094 & 0,54 & 27 \\
+        Suku asal Nusa Tenggara Timur & 4.184.923 & 1,77 & 12 \\
+        Dayak & 3.009.494 & 1,27 & 17 \\
+        Banjar & 4.127.124 & 1,74 & 13 \\
+        Suku asal Kalimantan lainnya & 1.968.620 & 0,83 & 22 \\
+        Makassar & 2.672.590 & 1,13 & 20 \\
+        Bugis & 6.359.700 & 2,69 & 8 \\
+        Minahasa & 1.237.177 & 0,52 & 29 \\
+        Gorontalo & 1.251.494 & 0,53 & 28 \\
+        Suku asal Sulawesi lainnya & 7.634.262 & 3,22 & 4 \\
+        Suku asal Maluku & 2.203.415 & 0,93 & 22 \\
+        Suku asal Papua & 2.693.630 & 1,14 & 19 \\
+        Cina & 2.832.510 & 1,20 & 18 \\
+        Asing/Luar Negeri & 162.772 & 0,07 & 31 \\ 
+        \hline
+    \end{tabular}%
+}
+\end{table}
 
 % --- Teks ini sekarang muncul SETELAH gambar ---
-Berdasarkan data dari Sensus Penduduk 2010 pada gambar \ref{gambar:Suku-Bangsa}, didapat bahwa Indonesia memiliki kelompok suku bangsa yang sangat beragam \autocite{bps2012}. % <-- Tambahkan sitasi jika perlu
+Berdasarkan data dari Sensus Penduduk 2010 pada Tabel \ref{tab:sensus}, didapat bahwa Indonesia memiliki kelompok suku bangsa yang sangat beragam \autocite{bps2012}. % <-- Tambahkan sitasi jika perlu
 Oleh karena itu untuk merepresentasikan Indonesia diputuskan untuk mengambil 2 suku terbanyak di setiap pulau di Indonesia beserta kelompok suku representatif lainnya.
 
 Berikut ini adalah tabel pengelompokan 2 suku terbesar pada setiap pulau di Indonesia beserta kelompok representatif yang akan digunakan.
@@ -121,14 +201,15 @@ Berikut ini adalah tabel pengelompokan 2 suku terbesar pada setiap pulau di Indo
     \end{tabular}
 \end{table}
 
-Berdasarkan tabel \ref{tab:suku-bangsa}, dengan strategi pengambilan sampel berstrata berdasarkan wilayah ini, kesebelas kelompok suku bangsa tersebut dipilih untuk memastikan dataset yang dibangun dapat mewakili keragaman suku utama di Indonesia secara lebih berimbang, tidak hanya terkonsentrasi pada populasi mayoritas.
+Berdasarkan Tabel \ref{tab:suku-bangsa}, dengan strategi pengambilan sampel berstrata berdasarkan wilayah ini, kesebelas kelompok suku bangsa tersebut dipilih untuk memastikan dataset yang dibangun dapat mewakili keragaman suku utama di Indonesia secara lebih berimbang, tidak hanya terkonsentrasi pada populasi mayoritas.
 
 \section{Klasifikasi Deepfake}
+Secara umum, teknologi \textit{deepfake} dapat dikategorikan berdasarkan modalitas media yang dimanipulasi, yaitu visual, audio, dan multimodal. Masing-masing kategori memiliki metode pembangkitan dan karakteristik artefak yang berbeda. Klasifikasi mendalam mengenai jenis-jenis manipulasi deepfake ini divisualisasikan dalam diagram taksonomi berikut.
 \begin{figure}[H] % pilihan opsi [h!] meminta LaTeX menempatkannya "di sini"
 	\centering
   \captionsetup{justification=centering}
-    	\includegraphics[width=0.7\textwidth]{image/Deepfake.png}
-	\caption{Jenis-Jenis \textit{Deepfake}}
+    	\includegraphics[width=1\textwidth]{image/Deepfake.png}
+	\caption{Jenis-Jenis \textit{Deepfake} \autocite{croitoru2024}}
 	\label{gambar:deepfake}
 \end{figure}
 
@@ -177,30 +258,54 @@ Berdasarkan survei komprehensif oleh \autocite{croitoru2024}, media \textit{deep
 \end{enumerate}
 
 \section{\textit{Dataset} Terdahulu}
-\begin{figure}[H] % pilihan opsi [h!] meminta LaTeX menempatkannya "di sini"
-	\centering
-  \captionsetup{justification=centering}
-    	\includegraphics[width=0.7\textwidth]{image/Dataset.png}
-	\caption{\textit{Dataset Deepfake} Terdahulu}
-	\label{gambar:dataset}
-\end{figure}
+Pengembangan algoritma deteksi \textit{deepfake} yang handal sangat bergantung pada ketersediaan dan kualitas data pelatihan. Seiring dengan kemajuan teknik manipulasi wajah, berbagai \textit{dataset} publik telah dirilis oleh komunitas peneliti sebagai standar evaluasi. Evolusi \textit{dataset} ini terlihat jelas dari peningkatan skala data, mulai dari ribuan hingga jutaan video, serta variasi metode pembuatan yang semakin kompleks. Sumber data yang digunakan dalam \textit{dataset-dataset} ini bervariasi, mencakup video yang dikumpulkan dari \textit{platform} publik seperti YouTube untuk menangkap kondisi nyata, hingga video yang direkam dalam lingkungan terkontrol melibatkan aktor berbayar untuk menjamin kualitas visual. Pemahaman terhadap karakteristik \textit{dataset} terdahulu ini menjadi landasan penting untuk mengidentifikasi celah kekurangan yang ada saat ini, khususnya terkait representasi demografis dan kualitas video rendah. Informasi fundamental mengenai spesifikasi \textit{dataset-dataset} utama tersebut dirangkum dalam tabel berikut.
+\begin{table}[H]
+    \centering
+    % \small tidak wajib jika pakai resizebox, tapi boleh dibiarkan
+    \caption{Informasi Fundamental \textit{Dataset} Deteksi Video \textit{Deepfake} Terdahulu \autocite{sohan2023}}
+    \label{tab:dataset-deepfake}
+    
+    % --- MULAI PERBAIKAN: Tambahkan resizebox ---
+    \renewcommand{\arraystretch}{1}
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|l|c|l|r|r|r|r|}
+            \hline
+            \multirow{2}{*}{\textbf{Dataset}} & \multirow{2}{*}{\textbf{Rilis}} & \multirow{2}{*}{\textbf{Sumber}} & \multicolumn{2}{c|}{\textbf{Real}} & \multicolumn{2}{c|}{\textbf{Fake}} \\ \cline{4-7} 
+             & & & \textbf{Video} & \textbf{Frame} & \textbf{Video} & \textbf{Frame} \\ \hline
+            FaceForensics \autocite{rossler2018} & Mar 2018 & YouTube & 1.004 & 519k & 1.004 & 521k \\
+            FaceForensics++ \autocite{rossler2019} & Jan 2019 & YouTube & 1.000 & 509k & 4.000 & 18M \\
+            DeepFakeDetection \autocite{dufour2019} & Sep 2019 & Partisipan berbayar & 363 & 315k & 3.068 & 2.242k \\
+            UADFV \autocite{li2021uadfv} & Nov 2018 & YouTube & 49 & - & 49 & - \\
+            DeepfakeTIMIT \autocite{korshunov2018} & Des 2018 & YouTube & - & - & 620 & 68k \\
+            Celeb-DF \autocite{li2019celeb} & Sep 2019 & YouTube & 408 & - & 795 & - \\
+            Celeb-DFv2 \autocite{li2020celeb} & Nov 2019 & YouTube & 590 & 230k & 5.639 & 2.199k \\
+            DFDC preview \autocite{dolhansky2019} & Okt 2019 & Partisipan berbayar & 1.131 & - & 4.119 & - \\
+            DFDC \autocite{dolhansky2020} & Jun 2020 & Partisipan berbayar & 23.654 & - & 104.500 & - \\
+            DeeperForensics-1.0 \autocite{jiang2020} & Jan 2020 & Berbayar \& YouTube & 50.000 & 12,6M & 10.000 & 5M \\
+            WildDeepfake \autocite{zi2020} & Okt 2020 & Koleksi daring & 3.805 & 440k & 3.509 & 739k \\
+            KoDF \autocite{kwon2021} & Mar 2021 & Partisipan sukarela & 62.166 & - & 175.776 & - \\
+            ForgeryNet \autocite{he2021} & Jul 2021 & - & 99.630 & 1,4M & 121.617 & 1,4M \\ \hline
+        \end{tabular}%
+    }
+    % --- SELESAI PERBAIKAN ---
+\end{table}
 
-Gambar \ref{gambar:dataset} menyajikan informasi fundamental mengenai \textit{dataset-dataset} deteksi video \textit{deepfake} yang sudah ada. \textit{Dataset-dataset} ini, yang dirilis antara Maret 2018 hingga Juli 2021, digunakan secara luas dalam penelitian deteksi \textit{deepfake}. Sumber video untuk \textit{dataset} ini bervariasi, termasuk YouTube, partisipan berbayar, video yang dikumpulkan dari internet secara umum, dan partisipan sukarela.
-Berikut adalah daftar \textit{dataset} yang disebutkan beserta beberapa detailnya:
+Tabel \ref{tab:dataset-deepfake} menyajikan informasi fundamental mengenai \textit{dataset-dataset} deteksi video \textit{deepfake} yang sudah ada. \textit{Dataset-dataset} ini, yang dirilis antara Maret 2018 hingga Juli 2021, digunakan secara luas dalam penelitian deteksi \textit{deepfake}. Sumber video untuk \textit{dataset} ini bervariasi, termasuk YouTube, partisipan berbayar, video yang dikumpulkan dari internet secara umum, dan partisipan sukarela. \autocite{sohan2023}.
+Berikut adalah daftar \textit{dataset} di atas beserta detil-detilnya:
 \begin{enumerate}
-    \item \textit{FaceForensics}: Dirilis Maret 2018, bersumber dari \textit{YouTube}, berisi 1.004 video asli dan 1.004 video palsu.
-    \item \textit{FaceForensics++}: Dirilis Januari 2019, bersumber dari \textit{YouTube}, berisi 1.000 video asli dan 4.000 video palsu.
-    \item \textit{DeepFakeDetection}: Dirilis September 2019, bersumber dari partisipan berbayar, berisi 363 video asli dan 3.068 video palsu.
-    \item \textit{UADFV}: Dirilis November 2018, bersumber dari \textit{YouTube}, berisi 49 video asli dan 49 video palsu.
-    \item \textit{DeepfakeTIMIT}: Dirilis Desember 2018, berisi 620 video palsu. Jumlah video asli tidak disebutkan dalam tabel ini.
-    \item \textit{Celeb-DF}: Dirilis September 2019, bersumber dari \textit{YouTube}, berisi 408 video asli dan 795 video palsu.
-    \item \textit{Celeb-DFv2}: Dirilis November 2019, bersumber dari \textit{YouTube}, berisi 590 video asli dan 5.639 video palsu.
-    \item \textit{DFDC preview}: Dirilis Oktober 2019, bersumber dari partisipan berbayar, berisi 1.131 video asli dan 4.119 video palsu.
-    \item \textit{DFDC}: Dirilis Juni 2020, bersumber dari partisipan berbayar, berisi 23.654 video asli dan 104.500 video palsu.
-    \item \textit{DeeperForensics-1.0}: Dirilis Januari 2020, bersumber dari partisipan berbayar dan \textit{YouTube}, berisi 50.000 video asli dan 10.000 video palsu.
-    \item \textit{WildDeepfake}: Dirilis Oktober 2020, bersumber dari koleksi online, berisi 3.805 video asli dan 3.509 video palsu.
-    \item \textit{KoDF}: Dirilis Maret 2021, bersumber dari partisipan sukarela, berisi 62.166 video asli dan 175.776 video palsu.
-    \item \textit{ForgeryNet}: Dirilis Juli 2021, berisi 99.630 video asli dan 121.617 video palsu \autocite{sohan2023}.
+    \item \textit{FaceForensics}: Dirilis Maret 2018, bersumber dari \textit{YouTube}, berisi 1.004 video asli dan 1.004 video palsu. \autocite{rossler2018}.
+    \item \textit{FaceForensics++}: Dirilis Januari 2019, bersumber dari \textit{YouTube}, berisi 1.000 video asli dan 4.000 video palsu. \autocite{rossler2019}.
+    \item \textit{DeepFakeDetection}: Dirilis September 2019, bersumber dari partisipan berbayar, berisi 363 video asli dan 3.068 video palsu. \autocite{dufour2019}.
+    \item \textit{UADFV}: Dirilis November 2018, bersumber dari \textit{YouTube}, berisi 49 video asli dan 49 video palsu. \autocite{li2021uadfv}.
+    \item \textit{DeepfakeTIMIT}: Dirilis Desember 2018, berisi 620 video palsu. Jumlah video asli tidak disebutkan dalam tabel ini. \autocite{korshunov2018}.
+    \item \textit{Celeb-DF}: Dirilis September 2019, bersumber dari \textit{YouTube}, berisi 408 video asli dan 795 video palsu. \autocite{li2019celeb}.
+    \item \textit{Celeb-DFv2}: Dirilis November 2019, bersumber dari \textit{YouTube}, berisi 590 video asli dan 5.639 video palsu.\autocite{li2020celeb}.
+    \item \textit{DFDC preview}: Dirilis Oktober 2019, bersumber dari partisipan berbayar, berisi 1.131 video asli dan 4.119 video palsu.\autocite{dolhansky2019}.
+    \item \textit{DFDC}: Dirilis Juni 2020, bersumber dari partisipan berbayar, berisi 23.654 video asli dan 104.500 video palsu.\autocite{dolhansky2020}.
+    \item \textit{DeeperForensics-1.0}: Dirilis Januari 2020, bersumber dari partisipan berbayar dan \textit{YouTube}, berisi 50.000 video asli dan 10.000 video palsu. \autocite{jiang2020}.
+    \item \textit{WildDeepfake}: Dirilis Oktober 2020, bersumber dari koleksi online, berisi 3.805 video asli dan 3.509 video palsu. \autocite{zi2020}.
+    \item \textit{KoDF}: Dirilis Maret 2021, bersumber dari partisipan sukarela, berisi 62.166 video asli dan 175.776 video palsu. \autocite{kwon2021}.
+    \item \textit{ForgeryNet}: Dirilis Juli 2021, berisi 99.630 video asli dan 121.617 video palsu. \autocite{he2021}
 \end{enumerate}
 
 \section{\textit{Deepfake} Pada Dunia Nyata}
@@ -209,3 +314,136 @@ Kehadiran video yang dihasilkan oleh kecerdasan buatan (\textit{AI}) di media so
 Kompresi dan pengubahan ukuran pada media sosial dilakukan untuk mengatasi kendala \textit{bandwidth} dan penyimpanan yang sangat relevan di Indonesia. Meskipun langkah-langkah ini mengurangi ukuran file, mereka juga secara signifikan menurunkan kualitas fitur forensik yang penting untuk deteksi. Kompresi ini dapat menghilangkan atau mengaburkan artefak halus yang diperkenalkan selama proses pembuatan \textit{deepfake}, sehingga menyulitkan detektor untuk mengidentifikasi manipulasi secara akurat. Fenomena ini telah diamati secara konsisten dalam penelitian sebelumnya.
 
 Untuk menjembatani kesenjangan dengan aplikasi dunia nyata, beberapa upaya telah dilakukan, terutama dalam domain gambar. Pendekatan seperti membuat \textit{dataset} dengan gambar yang sudah dikompresi atau menggunakan \textit{fine-tuning} untuk mengadaptasi model pada data terkompresi telah diusulkan. Namun, replikasi transformasi kompresi platform untuk video dalam skala besar tetap menjadi tantangan karena keterbatasan \textit{API} dan kendala berbagi data. Artikel ini mengusulkan kerangka kerja emulasi untuk mereplikasi artefak kompresi dan \textit{resizing} video platform secara lokal, sebagai solusi untuk menghasilkan data pelatihan yang lebih realistis tanpa memerlukan akses \textit{API} langsung \autocite{montibeller2025}.
+
+\section{\textit{Benchmarking} FaceForensics++}
+Tujuan utama FaceForensics++ adalah untuk menyediakan \textit{dataset} berskala besar dan benchmark standar untuk melatih dan mengevaluasi metode deteksi manipulasi wajah secara adil dan terukur.
+
+Metodologi mereka dapat dibagi menjadi tiga langkah utama:
+\begin{enumerate}
+  \item Pengumpulan (\textit{Collection})\\
+  Sumber data dikumpulkan 1.000 video asli dari YouTube. Untuk memastikan video-video tersebut dapat dimanipulasi dengan baik oleh \textit{tool} otomatis, mereka melakukan penyaringan berlapis:
+  \begin{enumerate}[label=\alph*.]
+    \item Menggunakan tag seperti "newscaster" (pembawa berita) atau "interview" (wawancara). 
+    \item Hanya mengunduh video dengan resolusi 480p atau lebih tinggi.
+    \item Mereka menjalankan detektor wajah (Dlib) pada video untuk memastikan wajah subjek dapat dilacak, yang sangat penting untuk tool manipulasi.
+    \item Tim peneliti kemudian secara manual menyaring klip-klip tersebut untuk memastikan kualitasnya tinggi, wajah subjek sebagian besar menghadap ke depan, dan tidak ada oklusi (wajah tertutup) yang signifikan.
+  \end{enumerate}
+  \item Manipulasi (\textit{Manipulation}) \\
+  Mereka secara sistematis membuat video palsu dari 1.000 video asli tersebut menggunakan empat metode manipulasi terkemuka pada saat itu:
+  \begin{enumerate}[label=\alph*.]
+    \item \textit{Facial Reenactmen}: Mengubah ekspresi target agar sesuai dengan sumber.
+    \begin{enumerate}[label=\roman*.]
+      \item \textit{Face2Face}: Pendekatan klasik berbasis grafis komputer untuk mentransfer ekspresi.
+      \item \textit{NeuralTextures}: Pendekatan \textit{deep learning} yang mempelajari tekstur wajah untuk melakukan \textit{reenactment}.
+    \end{enumerate}
+    \item \textit{Identity Swap}: Menukar wajah target dengan wajah sumber.
+    \begin{enumerate}[label=\roman*.]
+      \item \textit{FaceSwap}: \textit{Tool} berbasis grafis komputer yang populer untuk menukar wajah.
+      \item \textit{DeepFakes}: Pendekatan berbasis \textit{deep learning} yang menggunakan jaringan saraf untuk menukar wajah.
+    \end{enumerate}
+  \end{enumerate} 
+  \item Kompresi (\textit{Post-processing})\\
+  Setelah membuat video palsu, mereka membuat tiga kualitas untuk setiap video (asli dan palsu):
+  \begin{enumerate}[label=\alph*.]
+    \item \textit{Raw}: Video asli yang belum dikompresi.
+    \item \textit{High Quality (HQ)}: Video dikompresi dengan rasio 23 (\textit{bitrate} sekitar 17 Mbit/s) menggunakan \textit{codec} H.264.
+    \item \textit{Low Quality (LQ)}: Video dikompresi dengan rasio 40 (\textit{bitrate} sekitar 7 Mbit/s) menggunakan \textit{codec} H.264.\\
+  \end{enumerate} 
+  Hasil akhirnya adalah \textit{dataset} masif dengan lebih dari 1,8 juta gambar yang dimanipulasi.
+\end{enumerate}
+
+\section{Teknik Kompresi Video}
+Penelitian yang dilakukan oleh \autocite{sajati2018} memanfaatkan FFmpeg untuk membangun sistem kompresi video berbasis web. Teknik kompresi yang digunakan adalah \textit{Lossy Compression}, di mana data hasil kompresi tidak akan sama persis dengan data aslinya, namun dianggap sudah cukup untuk digunakan.
+
+Proses kompresi yang diimplementasikan dalam penelitian tersebut dapat diuraikan sebagai berikut:
+\begin{enumerate}
+  \item Pemisahan (\textit{Splitting}): Sistem memecah \textit{file} video asli (misalnya, resolusi 720p) menjadi komponen video dan audio secara terpisah.
+  \item Kompresi (\textit{Compression}): 
+  \begin{enumerate}[label=\alph*.]
+    \item Komponen video dikompresi dan diubah resolusinya menjadi beberapa \textit{file} keluaran (contoh: 480p, 360p, dan 240p). 
+    \item Komponen audio juga dikompresi secara terpisah, namun hanya menjadi satu kualitas standar.
+  \end{enumerate}
+  \item Penggabungan (\textit{Merging}): Setelah kompresi, \textit{file} video dan audio yang telah diproses digabungkan kembali menjadi satu \textit{file} utuh sesuai dengan resolusi masing-masing.
+\end{enumerate}
+
+Pendekatan ini terbukti menghasilkan file yang lebih kecil. Pengujian menunjukkan bahwa dengan mengompresi audio, ukuran file akhir dapat berkurang sekitar 1-2 MB lebih kecil dibandingkan jika hanya mengompresi videonya saja. Jika dibandingkan dengan ukuran file asli (misalnya dari YouTube), perbedaan ukurannya bisa mencapai 5-20 MB.
+
+Meskipun efektif dalam mengurangi ukuran, teknik kompresi ini memiliki konsekuensi pada kualitas visual. Hasil pengujian menunjukkan bahwa kualitas gambar dari video yang dikompresi relatif lebih rendah dan tidak memenuhi standar kualitas 30dB.
+
+\begin{figure}[H] % pilihan opsi [h!] meminta LaTeX menempatkannya "di sini"
+  \centering
+  \captionsetup{justification=centering}
+    	\includegraphics[width=1\textwidth]{image/Kuda.png}
+  \caption{Perbedaan Kualitas Video Rendah dan Kualitas Video Tinggi \autocite{bartechtv2022}}
+  \label{gambar:ffmpeg}
+\end{figure}
+
+Perbedaan paling mencolok pada Gambar \ref{gambar:ffmpeg} terletak pada kerapatan piksel yang berdampak langsung pada kejelasan detail visual. Sementara gambar 144p menyajikan visual yang buram dan \textit{pixelated} sehingga detail halus seperti helaian surai kuda dan tekstur rumput melebur menjadi blok-blok warna yang tidak jelas akibat minimnya informasi data gambar 720p justru menampilkan ketajaman yang superior dengan garis batas yang tegas dan tekstur yang realistis, membuktikan bahwa peningkatan resolusi secara drastis memperkaya kualitas informasi visual yang dapat ditangkap oleh mata.
+
+\section{Kajian Pengembangan \textit{Dataset} dan Benchmarking untuk Algoritma Deteksi}
+Pengembangan algoritma deteksi \textit{deepfake} sangat bergantung pada ketersediaan data pelatihan yang berkualitas. Menurut tinjauan sistematis oleh \autocite{jabbar2023}, meskipun teknologi \textit{deepfake} telah ada selama beberapa dekade, kemampuan untuk memanipulasi gambar dan video dengan cepat menggunakan \textit{Artificial Intelligence}.
+
+\subsection{Kategorisasi \textit{Dataset} Berdasarkan Teknik Manipulasi}
+Alih-alih dikategorikan berdasarkan waktu rilisnya, evolusi \textit{dataset deepfake} dapat dipahami lebih baik melalui teknik manipulasi yang digunakan untuk menghasilkannya. Berdasarkan tinjauan literatur mengenai klasifikasi \textit{deepfake}, \textit{dataset} yang ada saat ini umumnya dibangun menggunakan pendekatan utama berikut: \textit{Identity Swapping}, \textit{Facial Reenactment}, dan pendekatan \textit{Hybrid} atau campuran.
+
+\begin{enumerate}
+  \item \textit{Dataset} Berbasis \textit{Identity Swapping} \\
+  Metode ini adalah teknik yang paling umum ditemukan, di mana wajah subjek pada video target digantikan oleh wajah dari subjek sumber.
+  \begin{enumerate}[label=\alph*.]
+    \item DeepfakeTIMIT: Merupakan salah satu dataset generasi awal yang berfokus pada pertukaran wajah menggunakan algoritma berbasis GAN. \textit{Dataset} ini memanipulasi wajah dari 32 subjek dengan resolusi yang terbatas.
+    \item UADFV: \textit{Dataset} ini juga menggunakan teknik pertukaran wajah dasar yang terdiri dari 49 video asli dan 49 video palsu, yang menjadi standar awal penelitian deteksi.
+    \item Celeb-DF \& Celeb-DFv2: \textit{Dataset} ini dikembangkan untuk mengatasi rendahnya kualitas visual pada \textit{dataset} generasi awal. Celeb-DF menggunakan algoritma pertukaran wajah yang lebih canggih untuk mengurangi artefak visual yang terlihat jelas, menghasilkan video \textit{deepfake} berkualitas tinggi yang lebih sulit dideteksi.
+    \item FaceForensics++: Dalam \textit{dataset} berskala besar ini, terdapat subset video yang dimanipulasi menggunakan teknik \textit{identity swapping}, yaitu menggunakan metode \textit{DeepFakes} dan \textit{FaceSwap}.
+  \end{enumerate} 
+  \item \textit{Dataset} Berbasis \textit{Facial Reenactment} \\
+  Berbeda dengan \textit{identity swapping}, metode ini memanipulasi ekspresi wajah target (seperti gerakan mulut, kedipan mata, atau pose kepala) agar meniru ekspresi dari wajah sumber, tanpa mengubah identitas orang tersebut.
+  \begin{enumerate}[label=\alph*.]
+    \item FaceForensics++: \textit{Dataset} ini menjadi \textit{benchmark} utama untuk kategori ini karena menyertakan manipulasi berbasis \textit{reenactment} secara sistematis. Metode yang digunakan mencakup \textit{Face2Face}, yang merupakan pendekatan klasik berbasis grafis komputer untuk mentransfer ekspresi secara \textit{real-time}, dan \textit{Neural Texture}s, yang menggunakan pendekatan \textit{deep learning} untuk memodifikasi tekstur wajah saat melakukan \textit{reenactment}. 
+  \end{enumerate} 
+  \item \textit{Dataset} Berbasis Pendekatan \textit{Hybrid} \\
+  Kategori ini mencakup \textit{dataset} yang tidak bergantung pada satu metode pembuatan saja, melainkan menggabungkan berbagai teknik atau mengumpulkan video yang sudah beredar luas di internet untuk mensimulasikan kondisi nyata.
+  \begin{enumerate}[label=\alph*.]
+    \item DFDC: \textit{Dataset} ini dirancang untuk tantangan skala besar dengan melibatkan ribuan aktor berbayar. Video dalam \textit{dataset} ini dimanipulasi menggunakan berbagai metode campuran, termasuk pertukaran wajah dan modifikasi audio-visual, untuk menciptakan keragaman artefak yang luas.
+    \item \textit{Wild Deepfake}: \textit{Dataset} ini dikumpulkan langsung dari internet, sehingga metode pembuatannya sangat bervariasi dan sering kali tidak diketahui metadatanya secara spesifik. \textit{Dataset} ini merepresentasikan ancaman nyata di mana video mengandung beragam jenis manipulasi yang telah melalui berbagai proses kompresi \textit{platform}.
+  \end{enumerate} 
+\end{enumerate}
+
+\subsection{Metodologi Pengembangan \textit{Dataset Benchmark}}
+Untuk membangun \textit{dataset} yang valid sebagai \textit{benchmark}, metodologi yang ketat diperlukan untuk menjamin \textit{ground truth} yang akurat. \autocite{rossler2018} menguraikan pendekatan \textit{end-to-end} dalam pembuatan \textit{dataset} FaceForensics yang mencakup tahapan berikut:
+\begin{enumerate}
+    \item {Pengumpulan Data (\textit{Data Collection})} \\
+    Video asli dikumpulkan dari YouTube dengan kriteria resolusi tinggi (di atas 480p) dan disaring secara manual untuk memastikan wajah subjek tidak terhalang.
+
+    \item {Manipulasi Otomatis (\textit{Automated Manipulation})} \\
+    Proses manipulasi dilakukan menggunakan pendekatan \textit{state-of-the-art} seperti \textit{Face2Face}. \autocite{rossler2018} menjelaskan proses ini melibatkan pelacakan wajah (\textit{tracking}), rekonstruksi model 3D, dan \textit{re-rendering} ekspresi wajah dari video sumber ke video target. \autocite{jabbar2023} mengklasifikasikan teknik manipulasi ini ke dalam empat kategori utama: \textit{Editing \& Synthesis}, \textit{Identity Replacement} (\textit{Swap/Transfer}), \textit{Reenactment} (ekspresi, mulut, tatapan), dan metode lainnya.
+
+    \item {Simulasi Kompresi (\textit{Post-Processing})} \\
+    \autocite{rossler2018} menekankan pentingnya mengevaluasi algoritma pada video yang terkompresi, karena kompresi media sosial sering menghilangkan jejak manipulasi tingkat rendah. Oleh karena itu, \textit{benchmark} standar menyediakan data dalam berbagai tingkat kompresi, misalnya menggunakan \textit{codec} H.264 dengan parameter kuantisasi 23 (\textit{light compression}) dan 40 (\textit{strong compression}).
+\end{enumerate}
+
+\section{Keterbatasan \textit{Dataset Benchmark} dalam Skenario Dunia Nyata}
+Berdasarkan penelitian terbaru oleh \autocite{sahu2025}, menunjukkan adanya kesenjangan yang signifikan antara kinerja model deteksi di lingkungan laboratorium yang terkontrol dibandingkan dengan skenario media sosial yang kacau. Berikut ini adalah keterbatasan \textit{dataset benchmark} dalam skenario dunia nyata.
+\begin{enumerate}
+    \item {Kesenjangan Antara Kondisi Ideal dan Kondisi \textit{Chaotic}} \\
+    Sebagian besar alat deteksi \textit{deepfake} saat ini dikembangkan dan diuji menggunakan \textit{dataset} berkualitas tinggi yang diberi label dengan jelas dalam kondisi laboratorium yang sempurna. Namun, lingkungan media sosial (seperti \textit{Instagram}, \textit{TikTok}, dan \textit{Facebook}) sangat berbeda karena sifatnya yang kacau, penuh dengan konten berkualitas rendah, dan terus-menerus dibagikan ulang. \textit{Dataset} standar sering kali gagal merepresentasikan kondisi ini, di mana konten sering kali dikompresi secara agresif, memiliki resolusi rendah, dan mengandung \textit{noise} visual yang signifikan.
+
+    \item {Dampak Kompresi dan Artefak \textit{Platform}} \\
+    Keterbatasan utama dari \textit{dataset benchmark} tradisional adalah ketidakmampuannya meniru degradasi kualitas yang terjadi di \textit{platform} sosial.
+    \begin{enumerate}[label=\alph*.]
+        \item Kompresi Agresif: \textit{Platform} media sosial secara rutin mengompres video dan gambar secara berat untuk menghemat penyimpanan, yang menghilangkan sinyal visual halus yang biasanya digunakan detektor untuk menemukan manipulasi.
+        \item \textit{Noise} dan Variabilitas: \textit{Dataset benchmark} cenderung bersih, sedangkan data dunia nyata mengandung \textit{noise}, konversi format \textit{file}, dan variasi \textit{frame rate} yang menutupi jejak forensik.
+        \item Hilangnya Fitur Deteksi: Studi menemukan bahwa kompresi media sosial dapat menyebabkan penurunan presisi deteksi rata-rata sebesar 15-20\% karena hilangnya fitur-fitur kritis yang ada pada data pelatihan berkualitas tinggi.
+    \end{enumerate}
+
+    \item {Bukti Empiris Kegagalan Generalisasi} \\
+    Ketergantungan pada \textit{dataset benchmark} membatasi validitas eksternal model, yang terbukti dari penurunan kinerja drastis saat model diuji pada data \textit{in-the-wild}:
+    \begin{enumerate}[label=\alph*.]
+        \item Penurunan Akurasi: Model canggih seperti \textit{CrossDF}, yang bekerja baik pada \textit{benchmark}, mengalami penurunan presisi menjadi 71,2\% dan \textit{recall} menjadi 66,4\% saat diuji pada \textit{dataset} media sosial nyata.
+        \item Kegagalan Model \textit{Real-Time}: Model yang dioptimalkan untuk kecepatan, seperti \textit{Tiny-LaDeDa}, juga menderita penurunan performa signifikan dengan presisi hanya mencapai 68,4\% akibat kompresi berat dan pengunggahan ulang konten.
+        \item Kasus Nyata: Dalam studi kasus kampanye misinformasi di \textit{Instagram}, sistem otomatis hanya mampu mendeteksi sekitar 55\% konten \textit{deepfake}, sementara 15\% sisanya lolos sepenuhnya karena resolusi rendah dan kompresi yang menyembunyikan tanda manipulasi.
+    \end{enumerate}
+
+    \item {Implikasi: Perlunya Pendekatan \textit{Multimodal}} \\
+    Keterbatasan \textit{dataset} visual tunggal menegaskan bahwa mengandalkan fitur visual saja tidak lagi cukup, terutama dengan kemajuan teknik \textit{generation} (seperti GAN dan difusi) yang meminimalkan artefak visual. Detektor masa depan harus dilatih menggunakan \textit{dataset} yang mencakup modalitas ganda (visual, \textit{audio}, dan temporal) untuk meningkatkan ketahanan terhadap variasi kualitas di dunia nyata.
+\end{enumerate}
+

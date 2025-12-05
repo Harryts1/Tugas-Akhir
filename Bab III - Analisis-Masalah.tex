@@ -8,9 +8,9 @@
 \label{chap:analisis-masalah}
 \section{Analisis Kondisi Saat Ini}
 Sistem deteksi \textit{deepfake} yang ada saat ini dapat dimodelkan sebagai sebuah alur proses yang bergantung penuh pada ketersediaan data pelatihan. Gambar \ref{gambar:III-1} menggambarkan model konseptual dari alur kerja deteksi \textit{deepfake} yang umum digunakan saat ini di Indonesia.
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{image/GambarIII.png}
+    \includegraphics[width=0.7\textwidth]{image/GambarIII.png}
     \caption{Model Konseptual Alur Deteksi \textit{Deepfake} Saat Ini}
     \label{gambar:III-1}
 \end{figure}
@@ -43,102 +43,128 @@ Untuk mencari solusi atas masalah-masalah tersebut, perlu disusun kebutuhan fung
 \subsection{Kebutuhan Fungsional}
 Berikut ini adalah Tabel \ref{tab:kebutuhan-fungsional} yang berisi kebutuhan-kebutuhan fungsional yang dibutuhkan untuk menjawab masalah-masalah tersebut.
 
-\begin{table}[H] % Menggunakan [H] dari paket float untuk memaksa posisi
+\begin{table}[H] 
     \centering
-    \caption{Kebutuhan Fungsional Dataset}
+    \caption{Kebutuhan Fungsional \textit{Dataset}}
     \label{tab:kebutuhan-fungsional}
-    \begin{tabular}{|l|l|p{8cm}|} % l=rata kiri, p{lebar}=paragraf rata kiri
-        \hline
-        \textbf{Kode} & \textbf{Kebutuhan Fungsional} & \textbf{Deskripsi} \\
-        \hline
-        F-01 & Konteks Lokal & \textit{Dataset} harus berisi video asli yang menampilkan wajah orang Indonesia yang beragam. \\
-        \hline
-        F-02 & Representasi Etnis & \textit{Dataset} harus merepresentasikan keragaman suku bangsa utama di Indonesia. \\
-        \hline
-        F-03 & Teknik Relevan & \textit{Dataset} harus berisi video palsu yang dibuat menggunakan teknik \textit{deepfake} yang umum, seperti visual \textit{deepfake}, audio \textit{deepfake}, maupun \textit{multimodal deepfake}. \\
-        \hline
-        F-04 & Simulasi Kompresi & \textit{Dataset} harus menyertakan versi video (asli dan palsu) yang telah disimulasikan efek kompresinya untuk meniru kualitas rendah di media sosial. \\
-        \hline
-        F-05 & Pelabelan Jelas & Setiap video dalam \textit{dataset} harus memiliki label yang jelas. \\
-        \hline
-        F-06 & Metadata Lengkap & \textit{Dataset} harus disertai \textit{metadata} yang detail untuk setiap video palsu. \\
-        \hline
-        F-07 & Keseimbangan Data & \textit{Dataset} harus memiliki keseimbangan yang wajar antara jumlah video asli dan palsu, serta antara video berkualitas tinggi dan rendah. \\
-        \hline
-    \end{tabular}
+    \renewcommand{\arraystretch}{1.2} % Mengatur jarak antar baris
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|l|l|p{10cm}|} % Lebar kolom deskripsi diperbesar agar proporsional
+            \hline
+            \textbf{Kode} & \textbf{Kebutuhan Fungsional} & \textbf{Deskripsi} \\
+            \hline
+            F-01 & Konteks Lokal & \textit{Dataset} harus berisi video asli yang menampilkan wajah orang Indonesia yang beragam. \\
+            \hline
+            F-02 & Representasi Etnis & \textit{Dataset} harus merepresentasikan keragaman suku bangsa utama di Indonesia. \\
+            \hline
+            F-03 & Teknik Relevan & \textit{Dataset} harus berisi video palsu yang dibuat menggunakan teknik \textit{deepfake} yang umum, seperti visual \textit{deepfake}, audio \textit{deepfake}, maupun \textit{multimodal deepfake}. \\
+            \hline
+            F-04 & Simulasi Kompresi & \textit{Dataset} harus menyertakan versi video (asli dan palsu) yang telah disimulasikan efek kompresinya untuk meniru kualitas rendah di media sosial. \\
+            \hline
+            F-05 & Pelabelan Jelas & Setiap video dalam \textit{dataset} harus memiliki label yang jelas. \\
+            \hline
+            F-06 & Metadata Lengkap & \textit{Dataset} harus disertai \textit{metadata} yang detail untuk setiap video palsu. \\
+            \hline
+            F-07 & Keseimbangan Data & \textit{Dataset} harus memiliki keseimbangan yang wajar antara jumlah video asli dan palsu, serta antara video berkualitas tinggi dan rendah. \\
+            \hline
+        \end{tabular}%
+    }
 \end{table}
 
 \subsection{Kebutuhan Nonfungsional}
 Berikut ini adalah Tabel \ref{tab:kebutuhan-non-fungsional} yang berisi atribut-atribut mengenai bagaimana (\textit{HOW}) sistem bekerja.
 
-\begin{table}[H] % Menggunakan [H] dari paket float untuk memaksa posisi
+\begin{table}[H] 
     \centering
-    \caption{Kebutuhan Non Fungsional Dataset}
+    \caption{Kebutuhan Non Fungsional \textit{Dataset}}
     \label{tab:kebutuhan-non-fungsional}
-    \begin{tabular}{|l|l|p{8cm}|} % l=rata kiri, p{lebar}=paragraf rata kiri
-        \hline
-        \textbf{Kode} & \textbf{Kebutuhan Non Fungsional} & \textbf{Penjelasan} \\
-        \hline
-        NF-01 & Relevansi & \textit{Dataset} harus sangat relevan dengan masalah disinformasi \textit{deepfake} di Indonesia. \\
-        \hline
-        NF-02 & Keberagaman & \textit{Dataset} harus beragam, tidak hanya dari segi etnis, tetapi juga pencahayaan, latar belakang, dan usia subjek. \\
-        \hline
-        NF-03 & Validitas & Label harus 100\% akurat. Proses validasi harus memastikan tidak ada kesalahan pelabelan. \\
-        \hline
-        NF-04 & Realisme & Video berkualitas rendah yang dihasilkan harus secara akurat mencerminkan artefak kompresi yang ditemukan di platform nyata. \\
-        \hline
-    \end{tabular}
+    \renewcommand{\arraystretch}{1.2} % Mengatur jarak antar baris
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|l|l|p{10cm}|} % Lebar kolom penjelasan diperbesar agar proporsional
+            \hline
+            \textbf{Kode} & \textbf{Kebutuhan Non Fungsional} & \textbf{Penjelasan} \\
+            \hline
+            NF-01 & Relevansi & \textit{Dataset} harus sangat relevan dengan masalah disinformasi \textit{deepfake} di Indonesia. \\
+            \hline
+            NF-02 & Keberagaman & \textit{Dataset} harus beragam, tidak hanya dari segi etnis, tetapi juga pencahayaan, latar belakang, dan usia subjek. \\
+            \hline
+            NF-03 & Validitas & Label harus 100\% akurat. Proses validasi harus memastikan tidak ada kesalahan pelabelan. \\
+            \hline
+            NF-04 & Realisme & Video berkualitas rendah yang dihasilkan harus secara akurat mencerminkan artefak kompresi yang ditemukan di platform nyata. \\
+            \hline
+        \end{tabular}%
+    }
 \end{table}
 
 \section{Analisis Pemilihan Solusi}
 Berikut ini adalah beberapa alternatif solusi yang diusulkan beserta metode dalam penentuan solusi.
 
-\subsection{Alternatif Solusi}
-Berikut ini adalah Tabel \ref{tab:alternatif-solusi} yang menampilkan beberapa alternatif solusi yang diajukan untuk memenuhi kebutuhan akan \textit{dataset} \textit{deepfake} berkualitas rendah di Indonesia.
+\section{Analisis Pemilihan Solusi}
+Berikut ini adalah beberapa alternatif solusi yang diusulkan beserta metode dalam penentuan solusi.
 
-\begin{table}[H] % Menggunakan [H] dari paket float untuk memaksa posisi
-    \centering
-    \caption{Alternatif Solusi Dataset}
-    \label{tab:alternatif-solusi}
-    \begin{tabular}{|c|p{10cm}|} % c=rata tengah, p{lebar}=paragraf rata kiri
-        \hline
-        \textbf{Alternatif Solusi} & \textbf{Solusi} \\
-        \hline
-        1 & Mengambil \textit{dataset} yang ada dan hanya menerapkan simulasi kompresi pada video-video tersebut. \\
-        \hline
-        2 & Hanya mengumpulkan video \textit{deepfake} yang sudah beredar di media sosial Indonesia. \\
-        \hline
-        3 & Mengumpulkan video asli lokal, membuat \textit{deepfake} sendiri, dan menerapkan kompresi secara sistematis. \\
-        \hline
-    \end{tabular}
-\end{table}
+\subsection{Penjabaran Alternatif Solusi}
+Terdapat tiga alternatif solusi utama yang diidentifikasi untuk memenuhi kebutuhan \textit{dataset} \textit{deepfake} berkualitas rendah dalam konteks Indonesia.
+
+\subsubsection{Alternatif Solusi 1: Kompresi \textit{Dataset} Publik yang Ada}
+Solusi ini mengusulkan penggunaan \textit{dataset} publik yang sudah mapan dan teruji, seperti FaceForensics++ atau Celeb-DF, sebagai basis. Pekerjaan utama dalam alternatif ini adalah mengambil video-video (asli dan palsu) dari \textit{dataset} tersebut dan kemudian menerapkan simulasi kompresi video secara sistematis, sebagaimana yang diuraikan oleh \autocite{montibeller2025}. Pendekatan ini secara langsung menargetkan kebutuhan F-04 (Simulasi Kompresi) dan NF-04 (Realisme Kompresi).
+
+Kelebihan utama dari pendekatan ini adalah efisiensi waktu dan sumber daya. Proses pengumpulan data (Fase Pengumpulan) dan generasi \textit{deepfake} (Fase Generasi) dapat dilewati seluruhnya. Mengingat proses generasi \textit{deepfake} sangat intensif secara komputasi dan memakan waktu (Risiko 3), alternatif ini sangat menghemat sumber daya. \textit{Dataset} yang ada juga sudah memiliki pelabelan yang jelas (F-05) dan dibuat dengan teknik yang relevan (F-03).
+
+Namun, solusi ini memiliki kelemahan fundamental yang tidak dapat diabaikan. \textit{Dataset} yang dihasilkan akan gagal total dalam memenuhi kebutuhan inti dari penelitian ini, yaitu F-01 (Konteks Lokal) dan F-02 (Representasi Etnis). Model yang dilatih pada \textit{dataset} ini (misalnya, wajah Kaukasia berkualitas rendah) kemungkinan besar akan tetap gagal melakukan generalisasi ketika dihadapkan pada video \textit{deepfake} dengan wajah Indonesia berkualitas rendah. Kegagalan ini terjadi karena model tidak hanya belajar dari artefak kompresi, tetapi juga dari fitur-fitur wajah yang spesifik secara demografis. Selain itu, \textit{metadata} yang ada (F-06) mungkin tidak cukup lengkap untuk tujuan penelitian, karena kita tidak memiliki kontrol atas parameter generasi \textit{deepfake} aslinya.
+
+\subsubsection{Alternatif Solusi 2: Pengumpulan Pasif \textit{Deepfake} Beredar}
+Solusi ini berfokus pada pengumpulan video \textit{deepfake} yang sudah beredar secara "liar" (\textit{in-the-wild}) di platform media sosial Indonesia. Pendekatan ini memiliki keunggulan teoretis tertinggi dalam hal relevansi (NF-01). \textit{Dataset} yang dihasilkan akan terdiri dari video-video yang memang menjadi masalah nyata di lapangan, sehingga secara otomatis memenuhi F-01 (Konteks Lokal) dan F-04 (Simulasi Kompresi), karena video tersebut adalah produk kompresi dunia nyata.
+
+Meskipun demikian, solusi ini memiliki banyak ketidakpastian fatal yang membuatnya tidak cocok untuk penelitian sistematis.
+\begin{enumerate}
+    \item {Ketiadaan \textit{Ground Truth}}: Hampir tidak mungkin mendapatkan video asli (\textit{ground truth}) untuk setiap video palsu yang ditemukan. Tanpa video asli, pelabelan (F-05) menjadi tidak terkontrol dan tidak dapat divalidasi 100\%.
+    \item {Metadata Tidak Diketahui}: Teknik \textit{deepfake} yang digunakan (F-03) dan \textit{metadata} video (F-06) tidak akan diketahui. Kita tidak tahu alat apa yang digunakan, parameter apa, atau berapa kali video itu dikompresi ulang. Ini menjadikannya \textit{dataset} "kotak hitam" (\textit{black box}) yang buruk untuk penelitian ilmiah.
+    \item {Kompresi Acak}: Kompresi (F-04) bersifat acak dan tidak terukur. Satu video mungkin dikompresi oleh WhatsApp, yang lain oleh TikTok, masing-masing dengan artefak yang berbeda. Ini mustahil untuk direplikasi atau dipelajari secara sistematis.
+    \item {Keseimbangan Data}: Keseimbangan data (F-07) akan sangat bergantung pada apa yang berhasil ditemukan (\textit{sampling bias}). Kemungkinan besar \textit{dataset} akan sangat tidak seimbang, baik antara jumlah video asli dan palsu, maupun representasi etnisnya (F-02) yang mungkin hanya terkonsentrasi pada beberapa tokoh publik saja.
+\end{enumerate}
+
+\subsubsection{Alternatif Solusi 3: Pengembangan \textit{Dataset End-to-End} Konteks Lokal}
+Solusi ini merupakan pendekatan paling komprehensif dan satu-satunya yang selaras dengan metodologi \textit{data-centric}. Pendekatan ini meniru metodologi \textit{benchmark} global seperti FaceForensics++ namun menerapkannya pada konteks Indonesia. Proses dimulai dengan Fase Pengumpulan (F-01), di mana video asli lokal yang merepresentasikan wajah dan demografi Indonesia (F-02) dikumpulkan secara strategis. Selanjutnya, pada Fase Generasi (F-03), video-video ini digunakan untuk membuat \textit{deepfake} baru secara internal. Terakhir, baik video asli maupun video palsu yang dihasilkan akan melalui proses simulasi kompresi yang sistematis dan terukur (F-04).
+
+Kelebihan utama dari pendekatan ini adalah {kontrol penuh} atas seluruh \textit{pipeline}.
+\begin{enumerate}
+    \item {Kontrol Pengumpulan}: Memastikan F-01 (Konteks Lokal) dan F-02 (Representasi Etnis) terpenuhi sesuai strategi pengambilan sampel pada Tabel \ref{tab:suku-bangsa}.
+    \item {Kontrol Generasi}: Memastikan F-03 (Teknik Relevan) terpenuhi dan F-06 (Metadata Lengkap) tercatat dengan akurat (misal: video A dibuat dengan \textit{face swap}, video B dengan \textit{lip-sync}).
+    \item {Kontrol Kompresi}: Memastikan F-04 (Simulasi Kompresi) diterapkan secara konsisten, memungkinkan pembuatan beberapa versi dari video yang sama (misal: Kualitas Tinggi, Kualitas Rendah 360p, Kualitas Rendah 144p) untuk analisis yang terisolasi.
+    \item {Kontrol Pelabelan}: Karena kita memiliki \textit{ground truth} (video asli) untuk setiap \textit{deepfake} yang kita buat, F-05 (Pelabelan Jelas) dan NF-03 (Validitas) terjamin 100\%. Ini juga memungkinkan F-07 (Keseimbangan Data) untuk diatur secara presisi.
+\end{enumerate}
+Meskipun solusi ini paling padat karya dan membutuhkan sumber daya komputasi yang signifikan (Risiko 3), ini adalah satu-satunya alternatif yang dapat memenuhi seluruh kebutuhan fungsional yang telah diidentifikasi dan menghasilkan \textit{dataset} yang valid secara ilmiah.
 
 \subsection{Analisis Penentuan Solusi}
 Berikut ini adalah Tabel \ref{tab:analisis-solusi} yang menampilkan beberapa alternatif solusi yang diajukan untuk memenuhi kebutuhan akan \textit{dataset} \textit{deepfake} berkualitas rendah di Indonesia.
 
-\begin{table}[H] % Menggunakan [H] dari paket float untuk memaksa posisi
+\begin{table}[H] 
     \centering
     \caption{Analisis Penentuan Solusi Dataset}
     \label{tab:analisis-solusi}
-    \begin{tabular}{|l|c|c|c|} % l=rata kiri, c=rata tengah
-        \hline
-        \textbf{Kebutuhan Fungsional} & \textbf{Alternatif Solusi 1} & \textbf{Alternatif Solusi 2} & \textbf{Alternatif Solusi 3} \\
-        \hline
-        F-01 (Konteks Lokal) & Tidak Terpenuhi & Terpenuhi & Terpenuhi \\
-        \hline
-        F-02 (Representasi Etnis) & Tidak Terpenuhi & Tidak Terkontrol & Terpenuhi \\
-        \hline
-        F-03 (Teknik Relevan) & Terpenuhi & Tidak Diketahui & Terpenuhi \\
-        \hline
-        F-04 (Simulasi Kompresi) & Terpenuhi & Kompresi Acak & Terpenuhi \\
-        \hline
-        F-05 (Pelabelan Jelas) & Terpenuhi & Tidak Terkontrol & Terpenuhi \\
-        \hline
-        F-06 (Metadata Lengkap) & Tidak Terpenuhi & Tidak Diketahui & Terpenuhi \\
-        \hline
-        F-07 (Keseimbangan Data) & Tergantung Dataset & Tidak Seimbang & Terpenuhi \\
-        \hline
-    \end{tabular}
+    % Menambah sedikit jarak antar baris agar tabel tidak terlalu padat
+    \renewcommand{\arraystretch}{1.2} 
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|l|c|c|c|} 
+            \hline
+            \textbf{Kebutuhan Fungsional} & \textbf{Alternatif Solusi 1} & \textbf{Alternatif Solusi 2} & \textbf{Alternatif Solusi 3} \\
+            \hline
+            F-01 (Konteks Lokal) & Tidak Terpenuhi & Terpenuhi & Terpenuhi \\
+            \hline
+            F-02 (Representasi Etnis) & Tidak Terpenuhi & Tidak Terkontrol & Terpenuhi \\
+            \hline
+            F-03 (Teknik Relevan) & Terpenuhi & Tidak Diketahui & Terpenuhi \\
+            \hline
+            F-04 (Simulasi Kompresi) & Terpenuhi & Kompresi Acak & Terpenuhi \\
+            \hline
+            F-05 (Pelabelan Jelas) & Terpenuhi & Tidak Terkontrol & Terpenuhi \\
+            \hline
+            F-06 (Metadata Lengkap) & Tidak Terpenuhi & Tidak Diketahui & Terpenuhi \\
+            \hline
+            F-07 (Keseimbangan Data) & Tergantung Dataset & Tidak Seimbang & Terpenuhi \\
+            \hline
+        \end{tabular}%
+    }
 \end{table}
 
 Berdasarkan Tabel \ref{tab:analisis-solusi}, dapat disimpulkan bahwa alternatif solusi 3 (Mengumpulkan video asli lokal, membuat \textit{deepfake} sendiri, dan menerapkan kompresi secara sistematis) adalah satu-satunya yang dapat memenuhi semua kebutuhan fungsional yang diidentifikasi. Solusi ini memberikan kontrol penuh atas konteks, jenis manipulasi, tingkat kompresi, dan pelabelan, yang sangat penting untuk tujuan penelitian.

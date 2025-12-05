@@ -3,9 +3,137 @@
 % ==========================================
 \chapter{RENCANA SELANJUTNYA}
 \label{chap:rencana-selanjutnya}
-Jelaskan secara detail langkah-langkah rencana selanjutnya, hal-hal yang diperlukan atau akan disiapkan, dan risiko dan mitigasinya, yang meliputi:
+Pengerjaan tugas akhir ini merupakan kolaborasi tim, fokus penulis (Harry Truman Suhalim) adalah pada pengembangan \textit{dataset}. \textit{Dataset} yang dihasilkan kemudian akan menjadi masukan krusial bagi Steven Adrian Corne untuk pengembangan model deteksi, dan model tersebut selanjutnya akan diintegrasikan ke dalam pengembangan \textit{browser extension} oleh Alvin Fadhilah Akmal.
+
+\section{Rencana Implementasi}
+Dikarenakan pada tugas akhir ini fokus utama saya pada \textit{dataset}, maka fase pengembangan adalah fase yang difokuskan dalam implementasinya. Fase pengembangan \textit{dataset} terdiri dari 4 tahapan utama yaitu: 
+\subsection{Fase Pengumpulan \textit{Collection}}
+Fase ini bertujuan untuk mengumpulkan bahan video asli yang merepresentasikan konten lokal Indonesia, sesuai dengan metodologi yang dijelaskan pada Bab I.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{image/GambarV1.png}
+    \caption{Fase Pengumpulan \textit{Collection}}
+    \label{gambar:V-1}
+\end{figure}
+
+Pada Gambar \ref{gambar:V-1} dijelaskan terkait fase \textit{collection} yang akan berfokus penuh pada identifikasi, pengunduhan, dan kurasi video asli. Alat bantu utama yang akan digunakan adalah untuk pengunduhan video berkualitas tinggi dan \textit{spreadsheet} untuk melacak sumber data. Proses pengecekan kualitas dan relevansi juga mencakup validasi manual. Video akan diperiksa secara visual untuk memastikan subjek merepresentasikan keragaman etnis Indonesia seperti yang telah didefinisikan (termasuk suku-suku pada Tabel \ref{tab:suku-bangsa}). Video yang subjeknya tidak dapat diidentifikasi secara jelas atau berada di luar cakupan demografis akan dieksklusi.
+
+Proses validasi sumber data video ini dilakukan sebagai berikut:
 \begin{enumerate}
-\item	Rencana implementasi, termasuk alat dan bahan yang diperlukan, lingkungan, konfigurasi, biaya, dan sebagainya.
-\item	Desain pengujian dan evaluasi, misalnya metode verifikasi dan validasi.
-\item	Analisis risiko dan mitigasi, misalnya tindakan selanjutnya jika ada yang tidak berjalan sesuai rencana.
+    \item Validasi Konteks Lokal (Visual)\\
+    Video diperiksa secara visual untuk memastikan subjek utama adalah orang yang merepresentasikan demografi Indonesia, sesuai kebutuhan. Video yang subjeknya tidak jelas atau di luar konteks demografi Indonesia akan dieksklusi.
+    \item Validasi Representasi Etnis (Fenotipe)\\
+    Peneliti akan melakukan pelabelan kategori dominan. Subjek dalam video akan dicocokkan secara visual (fenotipe) dengan salah satu dari 13 kelompok suku bangsa yang telah diidentifikasi pada Tabel \ref{tab:suku-bangsa}.
+    \item Validasi Relevansi Audio (Logat) \\
+    Terkait data multimodal dan audio, saluran audio akan divalidasi. Video harus memiliki audio ucapan yang jelas dan diutamakan yang memiliki logat (aksen) kedaerahan Indonesia yang dapat diidentifikasi.
+    \item Validasi Kualitas Teknis \\
+    Video harus memiliki kualitas resolusi awal yang tinggi dan bebas dari artefak kompresi yang signifikan agar dapat dianggap sebagai bahan mentah yang valid.\\
 \end{enumerate}
+Hanya video yang lolos keempat kriteria validasi ini yang akan diunduh dan diproses ke fase selanjutnya.
+
+Dalam konteks penelitian ini, Video Mentah (disebut juga \textit{raw video}, \textit{pristine video}, atau video sumber) merujuk pada klip video digital yang otentik, asli, dan belum mengalami manipulasi digital, khususnya manipulasi \textit{deepfake}.
+
+Video-video ini berfungsi sebagai data pembanding atau \textit{ground truth}. Peran utamanya dalam penelitian ini ada dua:
+\begin{enumerate}
+    \item Sebagai Sampel Kelas Asli\\
+    Video ini merepresentasikan data asli dalam \textit{dataset}. Model deteksi akan dilatih untuk mengenali video-video ini sebagai non-manipulasi.
+    \item Sebagai Sumber Pembuatan \textit{Deepfake}\\
+    Video mentah ini digunakan sebagai bahan dasar untuk proses sintesis \textit{deepfake}. Wajah dalam video mentah ini akan diekstraksi dan digantikan untuk menghasilkan video palsu yang akan menjadi bagian dari \textit{dataset}.\\
+\end{enumerate}
+
+Pengambilan klip video dari \textit{platform} publik seperti YouTube untuk penyusunan \textit{dataset} penelitian ini didasarkan pada prinsip \textit{fair use}, sebagaimana diakui dalam hukum hak cipta AS dan dijelaskan dalam pedoman Google/YouTube.
+
+Menurut UU RI No. 28 Tahun 2014 tentang Hak Cipta, penggunaan materi berhak cipta untuk penyusunan Tugas Akhir ini dapat dibenarkan dan tidak termasuk dalam pelanggaran Hak Cipta.
+
+Dasar hukum utama untuk justifikasi ini terdapat pada Pasal 43 (a), yang menyatakan bahwa pengambilan Ciptaan untuk "kepentingan: pendidikan, penelitian, penulisan karya ilmiah..." tidak dianggap sebagai pelanggaran Hak Cipta, selama tidak merugikan kepentingan yang wajar dari Pencipta.
+
+Hal ini diperkuat oleh Pasal 44 ayat (1), yang secara eksplisit membolehkan penggunaan tersebut dengan syarat:
+
+\begin{enumerate}
+    \item Penggunaannya tidak komersial; dan
+    \item Tidak merugikan kepentingan yang wajar dari Pencipta.\\
+\end{enumerate}
+
+Aspek Etika dan Perlindungan Data Pribadi "Selain aspek hak cipta, penelitian ini juga memperhatikan aspek privasi subjek data sesuai dengan UU No. 27 Tahun 2022 tentang Perlindungan Data Pribadi (UU PDP). Wajah merupakan data biometrik yang bersifat sensitif. Oleh karena itu, langkah mitigasi etika yang dilakukan meliputi:
+
+\begin{enumerate}
+    \item Penggunaan Data Publik: Video dikumpulkan hanya dari tokoh publik atau konten kreator yang telah mempublikasikan wajahnya secara sadar di domain publik (YouTube), bukan dari akun privat.
+    \item Tujuan Non-Destruktif: Manipulasi \textit{deepfake} dilakukan semata-mata untuk pelatihan algoritma deteksi (defensif), bukan untuk pencemaran nama baik atau penipuan.
+    \item Transparansi \textit{Dataset}: \textit{Dataset} yang dihasilkan tidak akan disebarluaskan secara bebas tanpa \textit{Data Use Agreement} yang ketat."
+\end{enumerate}
+
+\subsection{Fase Generasi dan Pemrosesan (\textit{Construction})}
+Fase ini merupakan inti teknis dari pengembangan \textit{dataset}. Pada tahap ini, video \textit{deepfake} akan dibuat dan simulasi kompresi akan diterapkan untuk menghasilkan video berkualitas rendah.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{image/GambarV2.png}
+    \caption{Fase Generasi dan Pemrosesan (\textit{Construction})}
+    \label{gambar:V-2}
+\end{figure}
+
+Pada Gambar \ref{gambar:V-2} dijelaskan terkait fase \textit{construction} yang akan dilakukan generasi video-video \textit{deepfake} dari video yang telah dikumpulkan pada fase sebelumnya. Setelah itu, video \textit{deepfake} dan video asli akan dilakukan kompresi untuk mendapatkan video \textit{low quality}. Video berkualitas rendah di sini adalah video dengan kualitas minimal 144p dalam konteks YouTube dan kualitas-kualitas diatasnya yang tetap merepresentasikan video berkualitas rendah.
+
+\subsection{Fase Pelabelan(\textit{Labelling})}
+Pada fase ini, setiap data yang telah diproses akan diberi label informatif (asli/palsu) dan metadata yang detail untuk memberikan konteks bagi model \textit{machine learning}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{image/GambarV3.png}
+    \caption{Fase Pelabelan (\textit{Labelling})}
+    \label{gambar:V-3}
+\end{figure}
+
+Pada Gambar \ref{gambar:V-3} dijelaskan terkait fase \textit{labelling} yang akan dibuat struktur folder yang sistematis dan file metadata yang mencatat informasi detail untuk setiap file video.
+
+Untuk memenuhi kebutuhan Representasi Etnis dan menjaga konsistensi pelabelan, penelitian ini menggunakan pendekatan Pelabelan Kategori Dominan. Setiap video akan dievaluasi secara visual dan dimasukkan ke dalam satu kategori tunggal dari kelompok suku bangsa yang telah diidentifikasi pada Tabel \ref{tab:suku-bangsa}. Kategori yang dipilih adalah yang paling merepresentasikan fitur visual (fenotipe) dominan dari subjek dalam video. 
+
+\subsection{Fase Validasi (\textit{Transition})}
+Fase terakhir ini bertujuan untuk memastikan kualitas, integritas, dan keseimbangan dataset sebelum diserahkan untuk pelatihan model. Fase ini mirip dengan fase \textit{transition} pada pengembangan perangkat lunak, di mana produk diuji oleh pengguna akhirnya.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{image/GambarV4.png}
+    \caption{Fase Validasi (\textit{Transition})}
+    \label{gambar:V-4}
+\end{figure}
+
+Pada Gambar \ref{gambar:V-4} dijelaskan terkait fase \textit{transition} yang akan dilakukan pengujian akhir pada \textit{dataset} untuk memastikan kualitas dan keseimbangan data sebelum diserahkan untuk pelatihan model deteksi dengan validasi internal dan validasi eksternal sebagai berikut.
+
+\begin{enumerate}
+    \item Validasi internal (dilakukan oleh peneliti \textit{dataset}/Harry):\\
+    \begin{enumerate}[label=\alph*.]
+        \item Pemeriksaan keakuratan label: dilakukan \textit{cross-check} untuk memastikan video ‘Asli’ benar-benar asli dan ‘Palsu’ benar-benar palsu. 
+        \item Pemeriksaan keseimbangan data: diperiksa bahwa distribusi data seimbang, baik antar kelas (asli vs palsu) maupun antar kualitas (tinggi vs rendah). 
+    \end{enumerate}
+    \item Validasi eksternal (dilakukan oleh pengguna/Steven): \\
+    \begin{enumerate}[label=\alph*.]
+        \item Validasi umpan balik model: \textit{dataset} diserahkan kepada Steven untuk melatih model.
+        \item Kinerja model sebagai tolak ukur: hasil uji validasi dari performa model Steven akan menjadi \textit{feedback} langsung atas kualitas \textit{dataset}. Jika model yang dilatih Steven menunjukkan performa yang baik dan \textit{robust}, maka \textit{dataset} Anda dapat divalidasi sebagai berkualitas dan berhasil.
+    \end{enumerate}
+\end{enumerate}
+
+\section{Analisis Risiko dan Mitigasi}
+Pengerjaan tugas akhir selanjutnya tentunya tidak akan lepas dari risiko-risiko yang ada, baik dalam aspek sumber daya manusia, teknologi, proses, maupun finansial. Daftar risiko dalam pengerjaan tugas akhir ini beserta mitigasinya dijelaskan lebih lanjut pada Tabel \ref{tab:risiko_mitigasi} berikut ini.
+
+\begin{table}[H]
+    \centering
+    \caption{Analisis Risiko dan Mitigasi}
+    \label{tab:risiko_mitigasi}
+    \small 
+    \begin{tabular}{|c|p{2.5cm}|p{3cm}|p{3cm}|p{4cm}|}
+        \hline
+        \textbf{No} & \textbf{Risiko} & \textbf{Penyebab} & \textbf{Dampak} & \textbf{Mitigasi} \\
+        \hline
+        1 & Kesulitan Pengumpulan Video Lokal & Keterbatasan video asli yang berkualitas tinggi di platform publik. & Dataset tidak representatif, bias terhadap demografi tertentu. & 1. Memperluas sumber pencarian (arsip berita daerah, video pariwisata). \\
+        \hline
+        2 & Kualitas Generasi \textit{Deepfake} Buruk & Alat \textit{open-source} sulit dikonfigurasi; hasil terlihat tidak realistis. & Dataset terlalu mudah dideteksi, model tidak belajar artefak yang halus. & 1. Alokasi waktu di awal untuk eksperimen alat. \newline 2. Menggunakan \textit{pre-trained model} yang sudah ada. \newline 3. Memecah video menjadi klip pendek untuk hasil lebih stabil. \\
+        \hline
+        3 & Kebutuhan Komputasi (GPU) Tinggi & Proses generasi \textit{deepfake} membutuhkan daya komputasi GPU yang besar dan waktu yang lama. & Fase Generasi terhambat, pengerjaan TA terlambat. & 1. Melakukan \textit{downsampling} video sebelum diproses jika diperlukan. \newline 2. Menggunakan layanan \textit{cloud computing} (Google Colab Pro, AWS) sebagai anggaran cadangan. \\
+        \hline
+        4 & Simulasi Kompresi Tidak Realistis & Parameter tidak secara akurat mencerminkan kompresi asli. & Kesenjangan antara \textit{dataset} dan dunia nyata tetap ada, model gagal generalisasi. & 1. Melakukan studi pendahuluan (\textit{upload}/\textit{download} sampel video) untuk menganalisis \textit{bitrate} asli. \newline 2. Menerapkan \textit{feedback loop} dengan Steven (model) untuk menguji kompresi. \\
+        \hline
+        5 & Ketidakselarasan dengan Tim Model & \textit{Blocking dependency}: Pekerjaan Steven (Model) tidak bisa dimulai sebelum pekerjaan \textit{Dataset} 100\% selesai. & Keterlambatan penyelesaian \textit{dataset} akan menghambat seluruh kemajuan tim. & 1. Menerapkan rilis \textit{dataset} secara inkremental. \newline 2. Menjadwalkan sinkronisasi mingguan wajib dengan Steven untuk memvalidasi \textit{batch} data yang sudah selesai. \\
+        \hline
+    \end{tabular}
+\end{table}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.10.28)  4 NOV 2025 11:27
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.10.28)  4 DEC 2025 12:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -940,37 +940,37 @@ Package csquotes Info: Adjusting default style.
 
 
 Package csquotes Warning: No style for language 'indonesian'.
-(csquotes)                Using fallback style on input line 179.
+(csquotes)                Using fallback style on input line 195.
 
 Package csquotes Info: Redefining alias 'default' -> 'fallback'.
 (ProposalTA.aux
 (C:\Users\Harry\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel
 -english.tex)
 Package babel Info: Importing data for english
-(babel)             from babel-en.ini. Reported on input line 32.
+(babel)             from babel-en.ini. Reported on input line 10.
 )
 \openout1 = `ProposalTA.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -978,64 +978,64 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 179.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 179.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 179.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 179.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 179.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 179.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 179.
-LaTeX Font Info:    Redeclaring math accent \check on input line 179.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 179.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 179.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 179.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 179.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 179.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 179.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 179.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 179.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 179.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 179.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 179.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 179.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 179.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 179.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 179.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 179.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 195.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 195.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 195.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 195.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 195.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 195.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 195.
+LaTeX Font Info:    Redeclaring math accent \check on input line 195.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 195.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 195.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 195.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 195.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 179.
+(Font)              `operators' in the math version `normal' on input line 195.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 1
-79.
+95.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 179.
+(Font)              `operators' in the math version `bold' on input line 195.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 
-179.
+195.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on 
-input line 179.
+input line 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
- 179.
+ 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 
-179.
+195.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 179.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 179.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 195.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on 
-input line 179.
+input line 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input lin
-e 179.
+e 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 179.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 179.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 195.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1093,7 +1093,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: xetex.def on input line 149.
 (C:\Users\Harry\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 )
-Package hyperref Info: Link coloring ON on input line 179.
+Package hyperref Info: Link coloring ON on input line 195.
  (ProposalTA.out) (ProposalTA.out)
 \@outlinefile=\write4
 \openout4 = `ProposalTA.out'.
@@ -1113,7 +1113,7 @@ Package biblatex Info: ... file 'indonesian.lbx' not found.
 
 
 Package biblatex Warning: Language 'indonesian' not supported.
-(biblatex)                Using dummy definitions on input line 179.
+(biblatex)                Using dummy definitions on input line 195.
 
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -1131,8 +1131,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'ProposalTA.bbl' found.
  (ProposalTA.bbl)
-Package biblatex Info: Reference section=0 on input line 179.
-Package biblatex Info: Reference segment=0 on input line 179.
+Package biblatex Info: Reference section=0 on input line 195.
+Package biblatex Info: Reference segment=0 on input line 195.
 File: image/ganesha.jpg Graphic file (type bmp)
 <image/ganesha.jpg>
 
@@ -1141,113 +1141,53 @@ File: image/ganesha.jpg Graphic file (type bmp)
 
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 280
+LaTeX Font Info:    Trying to load font information for U+msa on input line 296
 .
  (C:\Users\Harry\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 280
+LaTeX Font Info:    Trying to load font information for U+msb on input line 296
 .
 
 (C:\Users\Harry\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (9.06712pt too wide) in paragraph at lines 280--285
+Overfull \hbox (9.06712pt too wide) in paragraph at lines 296--301
  [] 
  []
 
 
 
-[1] (ProposalTA.toc)
+[1] (ProposalTA.toc
+
+[2
+
+])
 \tf@toc=\write5
 \openout5 = `ProposalTA.toc'.
 
 
 
-[2
+[3] (ProposalTA.lof
+Overfull \hbox (11.05289pt too wide) in paragraph at lines 132--132
+ [][] [][][]\TU/TimesNewRoman(0)/m/n/12 Perbedaan Kualitas Video Rendah dan Kua
+litas Video Tinggi ([][]BarTech 
+ []
 
-] (ProposalTA.lof)
+)
 \tf@lof=\write6
 \openout6 = `ProposalTA.lof'.
 
 
 
-[3] (ProposalTA.lot)
+[4] (ProposalTA.lot)
 \tf@lot=\write7
 \openout7 = `ProposalTA.lot'.
 
 
 
-[4] (ProposalTA.lol)
-\tf@lol=\write8
-\openout8 = `ProposalTA.lol'.
-
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 333.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 333.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@centercr' on input line 333.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightskip' on input line 333.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 333.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftskip' on input line 333.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 333.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\finalhyphendemerits' on input line 333.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 333.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parindent' on input line 333.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 333.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parfillskip' on input line 333.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@skip' on input line 333.
-
-
-
-[5
-
-] (Bab I - Pendahuluan.tex
+[5] (Bab I - Pendahuluan.tex
 Bab I.
-
-Overfull \hbox (6.23563pt too wide) in paragraph at lines 12--13
-\TU/TimesNewRoman(0)/m/n/12 dak wajar pada wajah dengan metode deteksi \TU/Time
-sNewRoman(0)/m/it/12 Convolutional Neural Networks \TU/TimesNewRoman(0)/m/n/12 
-(CNNs)
- []
-
 
 
 [1
@@ -1259,15 +1199,19 @@ sNewRoman(0)/m/it/12 Convolutional Neural Networks \TU/TimesNewRoman(0)/m/n/12
 
 [3]
 
-[4]) (Bab II - Studi-Literatur.tex
+[4]
 
 [5]
+
+[6]) (Bab II - Studi-Literatur.tex
+
+[7]
 Bab II.
 File: image/DataCentric.png Graphic file (type bmp)
 <image/DataCentric.png>
 
 
-[6
+[8
 
 ]
 Overfull \hbox (7.54617pt too wide) in paragraph at lines 41--42
@@ -1277,132 +1221,462 @@ l pada setiap sub-populasi
 
 
 
-[7]
-
-Package biblatex-chicago Warning: Empty Ibidem citation on input line 47.
-
-
-
-[8]
-File: image/Suku.png Graphic file (type bmp)
-<image/Suku.png>
-
-
 [9]
 
 [10]
-File: image/Deepfake.png Graphic file (type bmp)
-<image/Deepfake.png>
-
 
 [11]
 
 [12]
 
-Package biblatex-chicago Warning: Empty Ibidem citation on input line 176.
+Package biblatex-chicago Warning: Empty Ibidem citation on input line 88.
 
-File: image/Dataset.png Graphic file (type bmp)
-<image/Dataset.png>
 
 
 [13]
 
-[14]) (Bab III - Analisis-Masalah.tex
+[14]
+File: image/Deepfake.png Graphic file (type bmp)
+<image/Deepfake.png>
+
 
 [15]
 
+Package biblatex-chicago Warning: Empty Ibidem citation on input line 216.
+
+
+
 [16]
+
+[17]
+
+Package biblatex-chicago Warning: Empty Ibidem citation on input line 257.
+
+
+
+[18]
+
+[19]
+
+[20]
+Overfull \hbox (1.9017pt too wide) in paragraph at lines 336--337
+[]\TU/TimesNewRoman(0)/m/it/12 Face2Face\TU/TimesNewRoman(0)/m/n/12 : Pendekata
+n klasik berbasis grafis komputer untuk men-
+ []
+
+
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
+
+ []
+
+
+
+[22]
+File: image/Kuda.png Graphic file (type bmp)
+<image/Kuda.png>
+
+
+[23]
+Overfull \hbox (0.43484pt too wide) in paragraph at lines 383--383
+|[]\TU/TimesNewRoman(0)/b/n/12 Kajian Pengembangan \TU/TimesNewRoman(0)/b/it/12
+ Dataset \TU/TimesNewRoman(0)/b/n/12 dan Benchmarking untuk Algoritma De-
+ []
+
+
+
+[24]
+
+Package biblatex-chicago Warning: Empty Ibidem citation on input line 418.
+
+
+
+[25]
+Overfull \hbox (5.79263pt too wide) in paragraph at lines 433--434
+\TU/TimesNewRoman(0)/m/n/12 deo dan gambar secara berat untuk menghemat penyimp
+anan, yang meng-
+ []
+
+
+
+[26]) (Bab III - Analisis-Masalah.tex
+
+[27]
 Bab III.
 File: image/GambarIII.png Graphic file (type bmp)
 <image/GambarIII.png>
 
 
-[17
+[28
 
 ]
 
-[18]
-Underfull \hbox (badness 2478) in paragraph at lines 56--57
-[]\TU/TimesNewRoman(0)/m/it/12 Dataset \TU/TimesNewRoman(0)/m/n/12 harus merepr
-esentasikan keragaman
- []
-
-
-Overfull \hbox (10.3323pt too wide) in paragraph at lines 50--69
- [][] 
- []
-
-
-Overfull \hbox (1.0032pt too wide) in paragraph at lines 72--73
+[29]
+Overfull \hbox (1.0032pt too wide) in paragraph at lines 75--76
 \TU/TimesNewRoman(0)/m/n/12 Berikut ini adalah Tabel [][]III.2[][] yang berisi 
 atribut-atribut mengenai bagaimana (\TU/TimesNewRoman(0)/m/it/12 HOW\TU/TimesNe
 wRoman(0)/m/n/12 )
  []
 
 
-Overfull \hbox (38.6741pt too wide) in paragraph at lines 78--91
- [][] 
+
+[30]
+
+[31]
+Overfull \hbox (0.87234pt too wide) in paragraph at lines 120--121
+[]\TU/TimesNewRoman(0)/m/n/12 Ketiadaan \TU/TimesNewRoman(0)/m/it/12 Ground Tru
+th\TU/TimesNewRoman(0)/m/n/12 : Hampir tidak mungkin mendapatkan video asli (\T
+U/TimesNewRoman(0)/m/it/12 gro-
  []
 
 
 
-[19]
-Overfull \hbox (60.28647pt too wide) in paragraph at lines 123--142
- [][] 
- []
+[32]
 
+[33]) (Bab IV - Desain-Konsep-Solusi.tex
 
-
-[20]) (Bab IV - Desain-Konsep-Solusi.tex
-
-[21]
+[34]
 Bab IV.
+File: image/GambarIV.png Graphic file (type bmp)
+<image/GambarIV.png>
+
+
+[35
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+[]\TU/TimesNewRoman(0)/m/n/12 Dilatih dengan \TU/TimesNewRoman(0)/m/it/12 datas
+et \TU/TimesNewRoman(0)/m/n/12 berkualitas
+ []
+
 ) (Bab V - Rencana-Selanjutnya.tex
 
-[22
+[36]
 
-]
+[37]
 Bab V.
-)
+File: image/GambarV1.png Graphic file (type bmp)
+<image/GambarV1.png>
 
-[23
+
+[38
 
 ]
-Overfull \hbox (14.40468pt too wide) in paragraph at lines 378--378
+Underfull \hbox (badness 10000) in paragraph at lines 29--31
+
+ []
+
+
+
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+
+
+[40]
+File: image/GambarV2.png Graphic file (type bmp)
+<image/GambarV2.png>
+File: image/GambarV3.png Graphic file (type bmp)
+<image/GambarV3.png>
+
+
+[41]
+File: image/GambarV4.png Graphic file (type bmp)
+<image/GambarV4.png>
+
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+[]\TU/TimesNewRoman(0)/m/n/10.95 Kesulitan Pe-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\TU/TimesNewRoman(0)/m/n/10.95 ngumpulan
+ []
+
+
+Underfull \hbox (badness 3861) in paragraph at lines 128--128
+\TU/TimesNewRoman(0)/m/n/10.95 tas tinggi di pla-
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 128--129
+[]\TU/TimesNewRoman(0)/m/n/10.95 1. Memperluas sumber
+ []
+
+
+Underfull \hbox (badness 5331) in paragraph at lines 130--130
+[]\TU/TimesNewRoman(0)/m/n/10.95 Kualitas Gene-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
+\TU/TimesNewRoman(0)/m/n/10.95 rasi \TU/TimesNewRoman(0)/m/it/10.95 Deepfake
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
+[]\TU/TimesNewRoman(0)/m/n/10.95 Alat \TU/TimesNewRoman(0)/m/it/10.95 open-sour
+ce
+ []
+
+
+Underfull \hbox (badness 1215) in paragraph at lines 130--130
+\TU/TimesNewRoman(0)/m/n/10.95 hasil terlihat tidak
+ []
+
+
+Underfull \hbox (badness 4001) in paragraph at lines 130--131
+\TU/TimesNewRoman(0)/m/n/10.95 2. Menggunakan \TU/TimesNewRoman(0)/m/it/10.95 p
+re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+[]\TU/TimesNewRoman(0)/m/n/10.95 Kebutuhan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+\TU/TimesNewRoman(0)/m/n/10.95 Komputasi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+[]\TU/TimesNewRoman(0)/m/n/10.95 Proses generasi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+\TU/TimesNewRoman(0)/m/it/10.95 deepfake \TU/TimesNewRoman(0)/m/n/10.95 mem-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+\TU/TimesNewRoman(0)/m/n/10.95 butuhkan daya
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+\TU/TimesNewRoman(0)/m/n/10.95 komputasi GPU
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+\TU/TimesNewRoman(0)/m/n/10.95 yang besar dan
+ []
+
+
+Underfull \hbox (badness 1009) in paragraph at lines 132--132
+[]\TU/TimesNewRoman(0)/m/n/10.95 Fase Generasi ter-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+[]\TU/TimesNewRoman(0)/m/n/10.95 Simulasi
+ []
+
+
+Underfull \hbox (badness 8000) in paragraph at lines 134--134
+\TU/TimesNewRoman(0)/m/n/10.95 cara akurat men-
+ []
+
+
+Underfull \hbox (badness 2856) in paragraph at lines 134--134
+[]\TU/TimesNewRoman(0)/m/n/10.95 Kesenjangan anta-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+[]\TU/TimesNewRoman(0)/m/n/10.95 1. Melakukan studi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+\TU/TimesNewRoman(0)/m/n/10.95 pendahuluan (\TU/TimesNewRoman(0)/m/it/10.95 upl
+o-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+\TU/TimesNewRoman(0)/m/it/10.95 ad\TU/TimesNewRoman(0)/m/n/10.95 /\TU/TimesNewR
+oman(0)/m/it/10.95 download \TU/TimesNewRoman(0)/m/n/10.95 sampel
+ []
+
+
+Underfull \hbox (badness 1142) in paragraph at lines 134--135
+\TU/TimesNewRoman(0)/m/n/10.95 video) untuk menganali-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+\TU/TimesNewRoman(0)/m/it/10.95 loop \TU/TimesNewRoman(0)/m/n/10.95 dengan Stev
+en
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+\TU/TimesNewRoman(0)/m/n/10.95 (model) untuk menguji
+ []
+
+
+Overfull \hbox (3.65746pt too wide) in paragraph at lines 136--136
+[]\TU/TimesNewRoman(0)/m/n/10.95 Ketidakselarasan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+\TU/TimesNewRoman(0)/m/n/10.95 dengan Tim
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+[]\TU/TimesNewRoman(0)/m/it/10.95 Blocking depen-
+ []
+
+
+Underfull \hbox (badness 4819) in paragraph at lines 136--136
+\TU/TimesNewRoman(0)/m/it/10.95 dency\TU/TimesNewRoman(0)/m/n/10.95 : Pekerjaan
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+\TU/TimesNewRoman(0)/m/n/10.95 Steven (Model)
+ []
+
+
+Underfull \hbox (badness 1596) in paragraph at lines 136--136
+\TU/TimesNewRoman(0)/m/n/10.95 tidak bisa dimulai
+ []
+
+
+Underfull \hbox (badness 1776) in paragraph at lines 136--136
+\TU/TimesNewRoman(0)/m/n/10.95 sebelum pekerjaan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+\TU/TimesNewRoman(0)/m/it/10.95 Dataset \TU/TimesNewRoman(0)/m/n/10.95 100%
+ []
+
+
+Underfull \hbox (badness 2865) in paragraph at lines 136--136
+[]\TU/TimesNewRoman(0)/m/n/10.95 Keterlambatan pe-
+ []
+
+
+Underfull \hbox (badness 4242) in paragraph at lines 136--136
+\TU/TimesNewRoman(0)/m/n/10.95 nyelesaian \TU/TimesNewRoman(0)/m/it/10.95 datas
+et
+ []
+
+
+Underfull \hbox (badness 6110) in paragraph at lines 136--136
+\TU/TimesNewRoman(0)/m/n/10.95 akan menghambat
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+\TU/TimesNewRoman(0)/m/n/10.95 seluruh kemajuan
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 136--137
+\TU/TimesNewRoman(0)/m/n/10.95 2. Menjadwalkan sink-
+ []
+
+
+Underfull \hbox (badness 1132) in paragraph at lines 136--137
+\TU/TimesNewRoman(0)/m/n/10.95 ronisasi mingguan wajib
+ []
+
+
+Overfull \hbox (30.70358pt too wide) in paragraph at lines 124--139
+ [][] 
+ []
+
+
+
+[43])
+
+[44]
+Overfull \hbox (4.2496pt too wide) in paragraph at lines 388--388
+[][]\TU/TimesNewRoman(0)/m/n/12 Anugrah, Nur Syifa, Haidar Adilah, Danny Putran
+to Panggabean, dan Rizky Prabowo
+ []
+
+
+Overfull \hbox (11.5503pt too wide) in paragraph at lines 388--388
+\TU/TimesNewRoman(0)/m/n/12 Laksana. 2025. “  ANALISIS KECEPATAN INTERNET SELUL
+ER DI INDONE-
+ []
+
+
+Overfull \hbox (9.05162pt too wide) in paragraph at lines 388--388
+[][]\TU/TimesNewRoman(0)/m/n/12 Bonet-Jover, A., R. Sepúlveda-Torres, E. Saquet
+e, P. Martínez-Barco, A. Piad-Morffis,
+ []
+
+
+
+[45
+
+
+]
+Overfull \hbox (14.40468pt too wide) in paragraph at lines 388--388
 \TU/TimesNewRoman(0)/m/n/12 DALAM TEKNOLOGI DEEPFAKE: SYSTEMATIC LITERATURE REV
 IEW”.
  []
 
 
-Overfull \hbox (16.2692pt too wide) in paragraph at lines 378--378
+Overfull \hbox (16.2692pt too wide) in paragraph at lines 388--388
 \TU/TimesNewRoman(0)/m/n/12 Hanna Wallach, Hal Daumé III, dan Kate Crawford. 20
 21. \TU/TimesNewRoman(0)/m/it/12 Datasheets for Datasets.[] 
  []
 
 
 
-[24
+[46]
 
-
-]
-Overfull \hbox (17.6814pt too wide) in paragraph at lines 378--378
+[47]
+Overfull \hbox (17.6814pt too wide) in paragraph at lines 388--388
 [][]\TU/TimesNewRoman(0)/m/n/12 Zha, Daochen, Zaid Pervaiz Bhat, Kwei-Herng Lai
 , Fan Yang, Zhimeng Jiang, Shaochen
  []
 
 
-Package caption Warning: Unused \captionsetup[lstlisting] on input line 358.
+Package caption Warning: Unused \captionsetup[lstlisting] on input line 368.
 See the caption package documentation for explanation.
 
 
 
-[25] (ProposalTA.aux)
+[48] (ProposalTA.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-10-09>
  ***********
 Package rerunfilecheck Info: File `ProposalTA.out' has not changed.
-(rerunfilecheck)             Checksum: 571EB9C1BB2E32C2286FE829C6201D40;4576.
+(rerunfilecheck)             Checksum: 93AA8F92612D05F2326221DCAB5D4253;9687.
 
 
 Package biblatex Warning: Please rerun LaTeX.
@@ -1413,12 +1687,12 @@ Package logreq Info: Writing requests to 'ProposalTA.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31421 strings out of 403196
- 616790 string characters out of 5455919
- 1975331 words of memory out of 5000000
- 59591 multiletter control sequences out of 15000+600000
- 632934 words of font info for 85 fonts, out of 8000000 for 9000
+ 31610 strings out of 403196
+ 621688 string characters out of 5455919
+ 1996673 words of memory out of 5000000
+ 59778 multiletter control sequences out of 15000+600000
+ 634490 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,10n,93p,1201b,6875s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,12n,93p,1678b,8573s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on ProposalTA.pdf (31 pages).
+Output written on ProposalTA.pdf (54 pages).

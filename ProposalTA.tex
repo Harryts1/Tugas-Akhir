@@ -163,15 +163,31 @@
 % -- No Header dan No Footer ---
 \pagestyle{plain}
 
-% --- Ubah nama daftar listing ke "DAFTAR ALGORITMA" ---
-% --- Harus diletakkan sebelum \begin{document} ---
-\renewcommand{\lstlistlistingname}{\centering\normalsize DAFTAR KODE} 
-\renewcommand{\lstlistingname}{Kode}
-\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
-%\captionsetup[lstlisting]{justification=raggedright,singlelinecheck=false}
-
-
 \renewcommand \cftchapdotsep{4.5}
+%\cftsetrmarg{4em}  % Ini diset agar judul subbab tidak mepet ke nomor halaman di daftar isi
+% -- Atur indentasi judul bab, subbab, dan subsubbab di daftar isi ---
+\setlength{\cftchapindent}{0em}
+\setlength{\cftsecindent}{0em}
+\setlength{\cftsubsecindent}{0em}
+\setlength{\cftsubsubsecindent}{0em}
+
+% --- Ubah nama bulan ke Bahasa Indonesia ---
+\renewcommand*{\DTMbahasaimonthname}[1]{%
+  \ifcase#1 %
+    \or Januari%  % 1st month
+    \or Februari%  % 2nd month
+    \or Maret%  % 3rd month
+    \or April%  % 4th month
+    \or Mei%  % 5th month
+    \or Juni%  % 6th month
+    \or Juli%  % 7th month
+    \or Agustus%  % 8th month
+    \or September%  % 9th month
+    \or Oktober%  % 10th month
+    \or November%  % 11th month
+    \or Desember%  % 12th month
+  \fi
+}
 
 % ==========================================
 % AWAL DOKUMEN
@@ -216,7 +232,7 @@
     {\large PROGRAM STUDI SISTEM DAN TEKNOLOGI INFORMASI}\\
     {\large SEKOLAH TEKNIK ELEKTRO DAN INFORMATIKA}\\
     {\large INSTITUT TEKNOLOGI BANDUNG}\\
-    {\large Oktober 2025}
+    {\large Desember 2025}
     }
 \end{center}
 \end{titlepage}
@@ -255,7 +271,7 @@
   \vspace{1.5cm}
 
   Proposal Tugas Akhir ini telah disetujui dan disahkan\\ 
-  di Bandung, pada tanggal 28 Oktober 2025\\[1cm]
+  di Bandung, pada tanggal 04 Desember 2025\\[1cm]
 
 % ==========================================
 % Versi 1 pembimbing (default)
@@ -325,12 +341,6 @@
 \renewcommand{\cftafterlottitle}{\hfill}
 \listoftables
 \addcontentsline{toc}{chapter}{DAFTAR TABEL}
-
-% --- DAFTAR LISTING (ALGORITMA, PSEUDOCODE, SOURCE CODE) ---
-\newpage
-
-\lstlistoflistings
-\addcontentsline{toc}{chapter}{\lstlistlistingname}
 
 \mainmatter
 % --- FORMAT TAMPILAN JUDUL BAB, SUBBAB, JUDUL GAMBAR DAN TABEL ---
